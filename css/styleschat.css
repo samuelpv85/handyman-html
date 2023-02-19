@@ -1,0 +1,40 @@
+.logo img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .menu-centered {
+    text-align: center;
+  }
+  
+  .menu-centered ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-centered ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-centered ul li a {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .menu-centered ul li a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+
+  .border-soft {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }

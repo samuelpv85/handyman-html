@@ -1,61 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Handyman - Servicios de mantenimiento, pintura y remodelación</title>
+  <meta charset="UTF-8">
+  <title>Handyman</title>
+  <link rel="stylesheet" href="https://unpkg.com/pico.css">
+  <link rel="stylesheet" href="css/pico.min.css">
+  <link rel="stylesheet" href="css/styleschat.css">
+
 </head>
 <body>
-	<header>
-		<nav>
-			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Servicios</a></li>
-				<li><a href="#">Acerca de</a></li>
-				<li><a href="#">Contacto</a></li>
-				<li><a href="#">Otros</a></li>
-			</ul>
-		</nav>
-		<h1>Handyman</h1>
-	</header>
+  <header class="navbar">
+    <div class="container grid-lg">
+      <div class="navbar-brand">
+        <img src="logo.jpeg" alt="Handyman logo"><p class="logo-desc">Servicios de mantenimiento, pintura y remodelación</p>
+        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu">
+          <span class="icon"></span>
+          <span class="icon"></span>
+          <span class="icon"></span>
+        </button> -->
+      </div>
+      <nav class="navbar-menu collapse" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="navbar-item"><a class="navbar-link" href="#">Inicio</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Servicios</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Galería de proyectos</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Acerca de</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Contacto</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-	<main>
-		<section>
-			<h2>Servicios de Handyman</h2>
-			<ul>
-				<li>
-					<h3>Mantenimiento</h3>
-					<p>Realizamos reparaciones de plomería, instalaciones eléctricas, mantenimiento de aire acondicionado, limpieza de chimeneas, y mucho más.</p>
-				</li>
-				<li>
-					<h3>Pintura</h3>
-					<p>Nuestros expertos en pintura pueden transformar cualquier habitación o exterior en un espacio elegante y acogedor. Ofrecemos pintura de interiores y exteriores, lacado, texturizado y mucho más.</p>
-				</li>
-				<li>
-					<h3>Remodelación</h3>
-					<p>Nuestro equipo de expertos en remodelación puede ayudarte a transformar tu hogar u oficina. Ofrecemos servicios de carpintería, instalación de ventanas y puertas, construcción de cocinas y baños personalizados y mucho más.</p>
-				</li>
-			</ul>
-		</section>
 
-		<section>
-			<h2>Galería de proyectos anteriores</h2>
-			<p>Aquí te presentamos algunos de nuestros trabajos más recientes:</p>
-			<ul>
-				<li><img src="proyecto-1.jpg" alt="Proyecto 1"></li>
-				<li><img src="proyecto-2.jpg" alt="Proyecto 2"></li>
-				<li><img src="proyecto-3.jpg" alt="Proyecto 3"></li>
-			</ul>
-		</section>
-	</main>
 
-	<footer>
-		<p>Handyman &copy; 2023. Todos los derechos reservados.</p>
-		<ul>
-			<li><a href="#">Política de privacidad</a></li>
-			<li><a href="#">Términos y condiciones</a></li>
-		</ul>
-		<p>Teléfono: 123-456-7890 | Correo electrónico: info@handyman.com</p>
-	</footer>
+  <section class="bg-white border-soft">
+    <div class="container">
+      <h2 class="text-center">Servicios de Handyman</h2>
+      <div class="grid">
+        <div class="col-4 border-soft">
+          <h3>Pintura</h3>
+          <p>Realizamos reparaciones de plomería, instalaciones eléctricas, mantenimiento de aire acondicionado, limpieza de chimeneas, y mucho más.</p>
+          <br><br><br><br>
+          <img src="galeria/pintura1.jpeg" alt="Imagen" class="w-100 p-2 border-soft">
+        </div>
+        <div class="col-4 border-soft">
+          <h3>Ensamblaje</h3>
+          <p>Nuestros expertos en pintura pueden transformar cualquier habitación o exterior en un espacio elegante y acogedor. Ofrecemos pintura de interiores y exteriores, lacado, texturizado y mucho más.</p>
+          <br><br>
+          <img src="galeria/ensamblaje.jpeg" alt="Imagen" class="w-100 p-2 border-soft">
+        </div>
+        <div class="col-4 border-soft">
+          <h3>Molduras</h3>
+          <p>Nuestro equipo de expertos en remodelación puede ayudarte a transformar tu hogar u oficina. Ofrecemos servicios de carpintería, instalación de ventanas y puertas, construcción de cocinas y baños personalizados y mucho más.</p>
+          <br>
+          <img src="galeria/moldadura1.jpeg" alt="Imagen" class="w-100 p-2 border-soft">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Galería de proyectos anteriores</h2>
+      <p>Aquí te presentamos algunos de nuestros trabajos más recientes:</p>
+      <div class="grid">
+        <div class="col-4">
+          <img src="galeria/emsamblajeC.png" alt="Proyecto 1">
+        </div>
+        <div class="col-4">
+          <img src="galeria/molduraC.png" alt="Proyecto 2">
+        </div>
+        <div class="col-4">
+          <img src="galeria/PinturaC.png" alt="Proyecto 3">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light border-soft">
+    <div class="container">
+      <h2 class="text-center">Acerca de Nosotros</h2>
+      <p>En nuestro sitio web, ofrecemos una amplia variedad de servicios de pintura, ensamblaje y molduras para satisfacer todas tus necesidades en el hogar o negocio. Nos enorgullece ser uno de los líderes en el mercado de servicios de pintura y carpintería, brindando a nuestros clientes un servicio excepcional y resultados de alta calidad. <br>
+        Nuestro equipo de expertos en pintura y carpintería cuenta con una amplia experiencia en la realización de proyectos personalizados y únicos, utilizando únicamente las mejores marcas de pintura y herramientas para asegurarnos de que el trabajo quede perfecto. Además, nuestros profesionales pueden ayudarte a elegir los colores y acabados adecuados para cada proyecto, para que el resultado final sea exactamente como lo imaginaste. <br>
+        Ofrecemos servicios de ensamblaje y molduras para personalizar tu hogar o negocio y darle un toque de elegancia y sofisticación. Desde molduras de techo hasta puertas y marcos, nuestro equipo tiene la experiencia y habilidades necesarias para hacerlo de manera rápida y eficiente. <br>
+        En nuestra página web, encontrarás una amplia galería de fotos de proyectos anteriores y testimonios de clientes satisfechos que respaldan la calidad de nuestro trabajo. Además, nos aseguramos de que nuestros precios sean competitivos y justos para que nuestros clientes obtengan el mejor valor por su inversión. <br>
+        Si estás buscando un equipo confiable y profesional para tus proyectos de pintura, ensamblaje y molduras, ¡no dudes en contactarnos hoy mismo! Estamos comprometidos a brindarte el mejor servicio y resultados excepcionales para que tengas el hogar o negocio de tus sueños.</p>
+        <div align="right">
+        <P>HANDYMAN ·Custon Work·</p>
+        </div>
+    </div>
+  </section>
+  <section class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Contactanos</h2>
+      <p>Aquí te presentamos algunos de nuestros trabajos más recientes:</p>
+      <div class="grid">
+        <div class="col-4">
+          <img src="AcercaDe-1.jpg" alt="Proyecto 1">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark border-soft">
+    <div class="container">
+      <p class="text-light">&copy; 2023 Handyman - Servicios de mantenimiento, pintura y remodelación</p>
+    </div>
+  </footer>
+
 </body>
 </html>

@@ -1,0 +1,160 @@
+/* .menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    justify-content: center;
+}
+.menuCSS3 a {
+    display: block;
+    padding: 2em;
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+}
+.menuCSS3 a:hover {
+    background-color: #CC673B;
+}
+.menuCSS3 ul li ul {
+    display: none;
+    float:left;
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: block;
+}
+nav {
+    float: left;
+  } */
+
+/* +++++++++++++++++++++++++++++++++ */
+
+/* 
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+ header{
+   background-color: #F9F8FC;
+ }
+
+ #logo{
+   margin: auto;
+   height: 250px;
+   width: 320px;
+   text-align: center;
+ }
+
+ #logo h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 58px;
+  }
+
+nav{
+  height: 60px;
+  background-color:#17181C;
+  text-align: center;
+}
+
+nav ul{
+   list-style: none;
+   display: inline-block;
+   padding:18px;
+}
+
+nav ul li{
+    float: left;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 18px;
+}
+
+nav ul li a:hover{
+  background-color: #929fb3;
+} */
+
+
+
+/* +++++++++++++++++++++++++++++++++++++
+*/
+
+
+
+
+
+
+
+/* Estilos para el encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Puedes cambiar el color de fondo */
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el logo */
+  .logo {
+    width: 100px; /* Cambia el ancho de tu logo según tus necesidades */
+  }
+  
+  /* Estilos para la navegación */
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 20px; /* Cambia el espacio entre elementos según tus necesidades */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #333; /* Cambia el color del texto según tus necesidades */
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #f00; /* Cambia el color del texto al pasar el mouse sobre él */
+  }
+  
+  /* Estilos para el menú en dispositivos móviles */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .logo {
+      margin-bottom: 20px; /* Agrega un margen inferior al logo en dispositivos móviles */
+    }
+    
+    nav {
+      margin-top: 20px; /* Agrega un margen superior a la navegación en dispositivos móviles */
+    }
+    
+    nav ul {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    nav li {
+      margin: 0;
+    }
+  }
+
+  
