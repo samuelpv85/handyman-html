@@ -1,37 +1,3 @@
-.logo img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .menu-centered {
-    text-align: center;
-  }
-  
-  .menu-centered ul {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-centered ul li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu-centered ul li a {
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  .menu-centered ul li a:hover {
-    background-color: #fff;
-    color: #000;
-  }
   
   /* +++++++++++++++++++++++++++++++++++++++++++ */
 
@@ -85,3 +51,44 @@
     margin: 30px 0;
   }
   
+
+  /* ++++++++++++++++++++++ */
+
+
+  body{
+    font-family: Arial;
+    height: 300;
+  }
+
+  .section{
+    height: 70vh;
+    background-image: linear-gradient(#3300319a, #0d043db3, url('logo.jpeg'));
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+
+  .title{
+    text-align: center;
+    line-height: 70vh;
+    font-size: 3rem;
+    color: #6d15c6;
+  }
+
+  .nav{
+    background-color: #dfdddd;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    position: sticky;
+    top: 0;
+  }
+
+  .nav_link{
+    color: #3ad046;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
