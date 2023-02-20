@@ -57,12 +57,14 @@
 
   body{
     font-family: Arial;
-    height: 300;
+    height: 50%;
   }
 
   .section{
     height: 70vh;
-    background-image: linear-gradient(#3300319a, #0d043db3, url('logo.jpeg'));
+    background-image: url("../fondoHeader.png");
+
+    /* linear-gradient(#ac28a79a, #3e25ceb3); */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -72,11 +74,11 @@
     text-align: center;
     line-height: 70vh;
     font-size: 3rem;
-    color: #6d15c6;
+    color: #e51433;
   }
 
   .nav{
-    background-color: #dfdddd;
+    background-color: #332ebe;
     height: 80px;
     display: flex;
     align-items: center;
@@ -88,7 +90,7 @@
   }
 
   .nav_link{
-    color: #3ad046;
+    color: #edf1f5;
     text-decoration: none;
     font-size: 1.3rem;
   }
