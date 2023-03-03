@@ -61,13 +61,19 @@
   }
 
   .section{
-    height: 70vh;
+    /* height: 70vh; */
+    object-fit: cover;
+    /* width:100%;
+    height:100%; */
+    width: 1519px;
+    height: 640px;
     background-image: url("../fondoHeader.png");
-
-    /* linear-gradient(#ac28a79a, #3e25ceb3); */
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
+    margin-bottom:     --block-spacing-vertical: calc(var(--spacing) * 0);
+    /* linear-gradient(#ac28a79a, #3e25ceb3); */
+    background-attachment: fixed;
+    
   }
 
   .title{
@@ -79,11 +85,11 @@
 
   .nav{
     background-color: #332ebe;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 6rem;
 
     position: sticky;
     top: 0;
