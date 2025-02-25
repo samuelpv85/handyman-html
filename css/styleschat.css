@@ -47,7 +47,7 @@
   
   hr {
     border: none;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #b42d2d;
     margin: 30px 0;
   }
   
@@ -61,7 +61,7 @@
   --color-accent: #f97316;     /* Naranja para acentos */
   --color-dark: #1e293b;       /* Azul oscuro */
   --color-light: #f8fafc;      /* Blanco humo */
-  --color-text: #334155;       /* Texto principal */
+  --color-text: #375533;       /* Texto principal */
   --color-text-light: #94a3b8; /* Texto secundario */
 
   /* Tipografía */
@@ -85,6 +85,31 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+/* Ajuste global para mantener alineación */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  width: 100%;
+}
+
+/* Estilo global para títulos de sección */
+.text-center {
+  color: var(--color-dark);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
+
+.services h2,
+.gallery-section h2,
+.about-section h2,
+.contact-form h2 {
+  color: var(--color-dark);
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
 
 /* Estilos Base */
 body {
@@ -103,7 +128,7 @@ body {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.7)
-  ), url("../imgFondo2.png");
+  ), url("../fondoHeader.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -275,6 +300,13 @@ body {
   background-color: var(--color-light);
 }
 
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin: 0;
+}
+
 .service-card {
   background: white;
   border-radius: 1rem;
@@ -295,7 +327,7 @@ body {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
 }
 
 .service-header h3 {
@@ -322,7 +354,7 @@ body {
 
 .service-card p {
   color: var(--color-text-light);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-xs);
   flex-grow: 1;
 }
 
@@ -347,7 +379,7 @@ body {
   display: flex;
   justify-content: center;
   gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-xs);
   flex-wrap: nowrap;
   padding: 0 var(--spacing-md);
 }
@@ -378,8 +410,11 @@ body {
 }
 
 .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--spacing-md);
-  padding: 0 var(--spacing-md);
+  margin: 0;
+  padding: 0;
 }
 
 .image-container {
@@ -435,28 +470,22 @@ body {
 /* ====== Formulario de Contacto ====== */
 .contact-section {
   padding: var(--spacing-md) 0;
-  background: var(--color-light);
 }
 
 .contact-form {
   max-width: 800px;
   margin: 0 auto;
   padding: var(--spacing-md);
-  background: white;
-  border-radius: 0.75rem;
-  box-shadow: var(--shadow-md);
 }
 
 .contact-form h2 {
   color: var(--color-dark);
   font-size: var(--font-size-2xl);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
   text-align: center;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.contact-form .grid {
   gap: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
 }
@@ -470,6 +499,12 @@ input, textarea {
   transition: all 0.3s ease;
 }
 
+input:focus, textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
 textarea {
   min-height: 80px;
   margin-bottom: var(--spacing-xs);
@@ -478,10 +513,78 @@ textarea {
 button[type="submit"] {
   width: 100%;
   padding: 0.75rem;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
   margin-top: var(--spacing-xs);
 }
 
+button[type="submit"]:hover {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
 
+
+/* Agregar estilos ABOUT */
+.about-section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--color-light);
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+  background: white;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* .about-content h2 {
+  color: var(--color-dark);
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+  position: relative;
+} */
+.about-content h2 {
+  color: var(--color-dark);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+.about-content p {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+}
+
+.about-signature {
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  text-align: right;
+  margin-top: var(--spacing-lg);
+}
 
 
 
@@ -579,23 +682,49 @@ button[type="submit"] {
   .image-container img {
     height: 250px;
   }
+  .services .grid,
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-sm);
+  }
 /* Media queries para galería */
 
 /* Media queries para el formulario */
-@media (max-width: 768px) {
   .contact-form {
+    margin: 0 var(--spacing-sm);
     padding: var(--spacing-md);
-    margin: 0 var(--spacing-xs);
   }
 
-  .grid {
+  .contact-form .grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-xs);
   }
-}
 /* Media queries para el formulario */
 
+/* Media queries para container global */
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  /* Media queries para container ABOUT */
+  .about-content {
+    padding: var(--spacing-md);
+    margin: 0 var(--spacing-sm);
+  }
+
+  .about-content h2 {
+    font-size: var(--font-size-2xl);
+  }
+
+  .about-content p {
+    font-size: var(--font-size-base);
+  }
 
 
+}
 
+@media (max-width: 480px) {
+  .services .grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
