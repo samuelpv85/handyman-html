@@ -1,181 +1,291 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Handyman</title>
-  <!-- <link rel="stylesheet" href="https://unpkg.com/pico.css"> -->
-  <link rel="stylesheet" href="css/pico.css">
-  <link rel="stylesheet" href="css/styleschat.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <!-- <link href="css/css-iconos.css" rel="stylesheet"> -->
+    <title>Handyman</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/pico.css"> -->
+    <link rel="stylesheet" href="css/pico.css" />
+    <link rel="stylesheet" href="css/styleschat.css" />
+  </head>
+  <body>
+    <!-- <section class="section"> -->
+    <!-- <h1 class="title">Handyman <img src="logo.jpeg" alt="Handyman logo"></h1> -->
+    <!-- <img src="logo.jpeg" alt="Handyman logo"> -->
+    <!-- <p class="logo-desc">Servicios de mantenimiento, pintura y remodelación</p> -->
+    <!-- </section> -->
 
-</head>
-<body>
+    <section class="section hero">
+      <div class="hero-content">
+        <h1 class="title">
+          Handyman <img src="logo.jpeg" alt="Handyman logo" />
+        </h1>
+        <p class="hero-description">
+          Expertos en servicios de mantenimiento, pintura y remodelación
+        </p>
+        <!-- <a href="#5" class="cta-button">¡Contáctanos ahora!</a> -->
+      </div>
+    </section>
 
-<section class="section">
-  <h1 class="title">Handyman <img src="logo.jpeg" alt="Handyman logo"></h1>
-  <!-- <img src="logo.jpeg" alt="Handyman logo"> -->
-  <!-- <p class="logo-desc">Servicios de mantenimiento, pintura y remodelación</p> -->
-</section>
-<nav class="nav">
-  <a href="#" class="nav_link">Inicio</a>
-  <a href="#2" class="nav_link">Servicios</a>
-  <a href="#3" class="nav_link">Galería de proyectos</a>
-  <a href="#4" class="nav_link">Acerca de</a>
-  <a href="#5" class="nav_link">Contacto</a>
-  <!-- <a href="#" class="nav_link">Blog</a> -->
-</nav>
+    <nav class="nav">
+      <a href="#" class="nav_link">Inicio</a>
+      <a href="#2" class="nav_link">Servicios</a>
+      <a href="#3" class="nav_link">Galería de proyectos</a>
+      <a href="#4" class="nav_link">Acerca de</a>
+      <a href="#5" class="nav_link">Contacto</a>
+      <!-- <a href="#" class="nav_link">Blog</a> -->
+    </nav>
 
-  <section class="bg-white border-soft" id="2">
-    <div class="container">
-      <h2 class="text-center">Servicios de Handyman</h2>
-      <div class="grid">
-        <div class="col-4 border-soft">
-          <h3>Pintura</h3>
-          <p>Realizamos reparaciones de plomería, instalaciones eléctricas, mantenimiento de aire acondicionado, limpieza de chimeneas, y mucho más.</p>
-          <br><br><br><br>
-          <img src="galeria/pintura1.jpeg" alt="Imagen" class="w-100 p-2 border-soft">
-        </div>
-        <div class="col-4 border-soft">
-          <h3>Ensamblaje</h3>
-          <p>Nuestros expertos en pintura pueden transformar cualquier habitación o exterior en un espacio elegante y acogedor. Ofrecemos pintura de interiores y exteriores, lacado, texturizado y mucho más.</p>
-          <br><br>
-          <img src="galeria/ensamblaje.jpeg" alt="Imagen" class="w-100 p-2 border-soft">
-        </div>
-        <div class="col-4 border-soft">
-          <h3>Molduras</h3>
-          <p>Nuestro equipo de expertos en remodelación puede ayudarte a transformar tu hogar u oficina. Ofrecemos servicios de carpintería, instalación de ventanas y puertas, construcción de cocinas y baños personalizados y mucho más.</p>
-          <br>
-          <img src="galeria/moldadura1.jpeg" alt="Imagen" class="w-100 p-2 border-soft">
+    <section class="bg-white border-soft services" id="2">
+      <div class="container">
+        <h2 class="text-center">Nuestros Servicios</h2>
+        <div class="grid">
+          <div class="col-4 border-soft service-card">
+            <div class="service-header">
+              <i class="fas fa-paint-roller service-icon"></i>
+              <h3>Pintura</h3>
+            </div>
+            <p>
+              Nuestros expertos en pintura pueden transformar cualquier
+              habitación o exterior en un espacio elegante y acogedor. Ofrecemos
+              pintura de interiores y exteriores, lacado, texturizado y mucho
+              más.
+            </p>
+            <img
+              src="galeria/pintura1.jpeg"
+              alt="Servicio de pintura"
+              class="w-100 p-2 border-soft"
+            />
+          </div>
+
+          <div class="col-4 border-soft service-card">
+            <div class="service-header">
+              <i class="fas fa-tools service-icon"></i>
+              <h3>Ensamblaje</h3>
+            </div>
+            <p>
+              Especialistas en el armado y ensamblaje de muebles, estructuras y
+              equipamiento para tu hogar u oficina. Garantizamos un trabajo
+              profesional y duradero, siguiendo las especificaciones técnicas de
+              cada producto.
+            </p>
+            <img
+              src="galeria/ensamblaje.jpeg"
+              alt="Servicio de ensamblaje"
+              class="w-100 p-2 border-soft"
+            />
+          </div>
+
+          <div class="col-4 border-soft service-card">
+            <div class="service-header">
+              <i class="fas fa-crown service-icon"></i>
+              <h3>Molduras</h3>
+            </div>
+            <p>
+              Nuestro equipo de expertos en remodelación te ayuda a transformar
+              tu hogar u oficina con molduras de alta calidad. Ofrecemos diseño,
+              fabricación e instalación personalizada para cada proyecto.
+            </p>
+            <img
+              src="galeria/moldadura1.jpeg"
+              alt="Servicio de molduras"
+              class="w-100 p-2 border-soft"
+            />
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <section class="bg-light" id="3">
-    <div class="container">
-      <h2 class="text-center">Galería de proyectos anteriores</h2>
-      <p>Aquí te presentamos algunos de nuestros trabajos más recientes:</p>
-      <div class="grid">
-        <div class="col-4 border-soft">
-          <img src="galeria/emsamblajeC.png" alt="Proyecto 1">
-        </div>
-        <div class="col-4 border-soft">
-          <img src="galeria/molduraC.png" alt="Proyecto 2">
-        </div>
-        <div class="col-4 border-soft">
-          <img src="galeria/PinturaC.png" alt="Proyecto 3">
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="bg-light border-soft" id="4">
-    <div class="container">
-      <h2 class="text-center">Acerca de Nosotros</h2>
-      <p>En nuestro sitio web, ofrecemos una amplia variedad de servicios de pintura, ensamblaje y molduras para satisfacer todas tus necesidades en el hogar o negocio. Nos enorgullece ser uno de los líderes en el mercado de servicios de pintura y carpintería, brindando a nuestros clientes un servicio excepcional y resultados de alta calidad. <br>
-        Nuestro equipo de expertos en pintura y carpintería cuenta con una amplia experiencia en la realización de proyectos personalizados y únicos, utilizando únicamente las mejores marcas de pintura y herramientas para asegurarnos de que el trabajo quede perfecto. Además, nuestros profesionales pueden ayudarte a elegir los colores y acabados adecuados para cada proyecto, para que el resultado final sea exactamente como lo imaginaste. <br>
-        Ofrecemos servicios de ensamblaje y molduras para personalizar tu hogar o negocio y darle un toque de elegancia y sofisticación. Desde molduras de techo hasta puertas y marcos, nuestro equipo tiene la experiencia y habilidades necesarias para hacerlo de manera rápida y eficiente. <br>
-        En nuestra página web, encontrarás una amplia galería de fotos de proyectos anteriores y testimonios de clientes satisfechos que respaldan la calidad de nuestro trabajo. Además, nos aseguramos de que nuestros precios sean competitivos y justos para que nuestros clientes obtengan el mejor valor por su inversión. <br>
-        Si estás buscando un equipo confiable y profesional para tus proyectos de pintura, ensamblaje y molduras, ¡no dudes en contactarnos hoy mismo! Estamos comprometidos a brindarte el mejor servicio y resultados excepcionales para que tengas el hogar o negocio de tus sueños.</p>
-        <div align="right">
-        <P>HANDYMAN ·Custon Work·</p>
+    <section class="bg-light" id="3">
+      <div class="container">
+        <h2 class="text-center">Galería de proyectos anteriores</h2>
+        <div class="gallery-filters">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="pintura">Pintura</button>
+          <button class="filter-btn" data-filter="ensamblaje">
+            Ensamblaje
+          </button>
+          <button class="filter-btn" data-filter="molduras">Molduras</button>
         </div>
-    </div>
-  </section>
-
-  <section aria-label="Subscribe example">
-    <div class="container">
-      <article>
-        <hgroup>
-          <h2>Contacto</h2>
-          <div class="row">
-            <div class="col-6">
-              <h3>Información de contacto</h3>
-              <ul>
-                <li>Dirección: 1234 Calle Principal, Ciudad, Estado</li>
-                <li>Teléfono: (123) 456-7890</li>
-                <li>Correo electrónico: info@handyman.com</li>
-              </ul>
+        <div class="grid gallery-grid">
+          <div
+            class="col-4 border-soft gallery-item"
+            data-category="ensamblaje"
+          >
+            <div class="image-container">
+              <img src="galeria/emsamblajeC.png" alt="Proyecto de ensamblaje" />
+              <div class="image-overlay">
+                <h5>Ensamblaje de Muebles</h5>
+                <p>
+                  Armado profesional de mobiliario para Hogares y Oficinas,
+                  asegurando calidad y durabilidad.
+                </p>
+              </div>
             </div>
           </div>
-        </hgroup>
+
+          <div class="col-4 border-soft gallery-item" data-category="molduras">
+            <div class="image-container">
+              <img src="galeria/molduraC.png" alt="Proyecto de molduras" />
+              <div class="image-overlay">
+                <h5>Molduras Decorativas</h5>
+                <p>
+                  Acabados precisos y detallados en molduras, realzando la
+                  elegancia de cada espacio.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-4 border-soft gallery-item" data-category="pintura">
+            <div class="image-container">
+              <img src="galeria/PinturaC.png" alt="Proyecto de pintura" />
+              <div class="image-overlay">
+                <h5>Pintura Interior-Exterior</h5>
+                <p>
+                  Renovación integral de espacios con acabados de alta calidad y
+                  durabilidad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light border-soft" id="4">
+      <div class="container">
+        <h2 class="text-center">Acerca de Nosotros</h2>
+        <p>
+          Somos especialistas en transformar espacios con servicios de pintura,
+          ensamblaje y molduras para hogares y negocios. Con años de experiencia
+          en el mercado, nos enorgullece ofrecer resultados de alta calidad y un
+          servicio personalizado que supera las expectativas de nuestros
+          clientes. Nuestro equipo de expertos en pintura y carpintería utiliza
+          las mejores marcas y herramientas para garantizar acabados impecables.
+          Te asesoramos en la elección de colores, texturas y diseños,
+          asegurando que cada proyecto refleje tu estilo único. Además,
+          ofrecemos servicios de ensamblaje y molduras para añadir elegancia y
+          sofisticación a cualquier espacio. Desde molduras de techo hasta
+          puertas y marcos, trabajamos con precisión y eficiencia para entregar
+          resultados que enamoran. En nuestra galería, encontrarás ejemplos de
+          proyectos realizados y testimonios de clientes satisfechos que
+          respaldan nuestro compromiso con la excelencia. Nos esforzamos por
+          ofrecer precios competitivos y transparentes, asegurando la mejor
+          relación calidad-precio. Si buscas un equipo confiable y profesional
+          para tus proyectos, ¡contáctanos hoy mismo! Estamos aquí para hacer
+          realidad el hogar o negocio que siempre has soñado.
+        </p>
+        <div align="right">
+          <p>HANDYMAN ·Custon Work·</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="5">
+      <div class="container">
+        <article class="contact-form">
+          <h2>Contacto</h2>
+          <div class="contact-info">
+            <h3>Información de contacto</h3>
+            <ul>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> Dirección: 1234 Calle
+                Principal, Ciudad, Estado
+              </li>
+              <li><i class="fas fa-phone"></i> Teléfono: (123) 456-7890</li>
+              <li><i class="fas fa-envelope"></i> Correo: info@handyman.com</li>
+            </ul>
+          </div>
           <form class="grid">
-            <input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required="">
-            <input type="text" id="firstsurname" name="firstsurname" placeholder="first surname" aria-label="first surname" required="">
-        </form>
-        <form class="grid">
-          <input type="text" id="phone" name="phone" placeholder="Phone" aria-label="Phone" required="">
-          <input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required="">
-      </form>
-      <form class="grid">
-        <input type="text" id="textarea" name="textarea" placeholder="Mensaje" aria-label="Phone" Mensaje="">
-    </form>
-    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
-
-      </article>
-    </div>
-  </section>
-
-  <!-- <section class="bg-light " id="5">
-    <div class="container">
-      <h2>Contacto</h2>
-      <div class="row">
-        <div class="col-6">
-          <h3>Formulario de contacto</h3>
-          <form>
-            <div class="form-group">
-              <label for="name">Nombre completo:</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Correo electrónico:</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="phone">Teléfono:</label>
-              <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Mensaje:</label>
-              <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="First name"
+              aria-label="First name"
+              required=""
+            />
+            <input
+              type="text"
+              id="firstsurname"
+              name="firstsurname"
+              placeholder="first surname"
+              aria-label="first surname"
+              required=""
+            />
           </form>
-        </div>
+          <form class="grid">
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Phone"
+              aria-label="Phone"
+              required=""
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email address"
+              aria-label="Email address"
+              required=""
+            />
+          </form>
+          <div class="form-group full-width">
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Mensaje"
+              rows="4"
+            ></textarea>
+            <span class="error-message">Por favor ingrese su mensaje</span>
+          </div>
+          <button type="submit" onclick="event.preventDefault()">
+            Subscribe
+          </button>
+        </article>
       </div>
-    </div>
-  </section> -->
-  
+    </section>
 
-  <footer class="bg-dark border-soft">
-    <div class="container">
-      <div class="row">
-        <div class="col-4">
-          <h3>Sobre nosotros</h3>
-          <p>Somos una empresa dedicada a brindar servicios de mantenimiento, pintura y refracción para hogares y oficinas tanto en interiores como en exteriores.</p>
+    <footer class="bg-dark border-soft">
+      <div class="container">
+        <div class="row">
+          <div class="col-4">
+            <h3>Síguenos en</h3>
+            <ul class="social">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-4">
-          <h3>Contacto</h3>
-          <ul>
-            <li>Dirección: 1234 Calle Principal, Ciudad, Estado</li>
-            <li>Teléfono: (123) 456-7890</li>
-            <li>Correo electrónico: info@handyman.com</li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <h3>Síguenos en</h3>
-          <ul class="social">
-            <li><a href="#"><i class="icon-facebook"></i></a></li>
-            <li><a href="#"><i class="icon-twitter"></i></a></li>
-            <li><a href="#"><i class="icon-instagram"></i></a></li>
-            <li><a href="#"><i class="icon-linkedin"></i></a></li>
-          </ul>
-        </div>
+        <hr />
+        <p class="text-center">
+          © 2023 Handyman. Todos los derechos reservados.
+        </p>
       </div>
-      <hr>
-      <p class="text-center">© 2023 Handyman. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  
-
-</body>
+    </footer>
+    <script src="js/gallery.js"></script>
+  </body>
 </html>
