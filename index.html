@@ -100,39 +100,55 @@
       </div>
     </section>
 
-    <section class="bg-light" id="3">
+    <section class="slider-section" id="3">
       <div class="container">
-        <h2 class="text-center">Galería de Proyectos Anteriores</h2>
-        <div class="gallery-filters">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="pintura">Pintura</button>
-          <button class="filter-btn" data-filter="ensamblaje">
-            Ensamblaje
-          </button>
-          <button class="filter-btn" data-filter="molduras">Molduras</button>
-        </div>
-        <div class="grid gallery-grid">
-          <div
-            class="col-4 border-soft gallery-item"
-            data-category="ensamblaje"
-          >
-            <div class="image-container">
-              <img src="galeria/emsamblajeC.png" alt="Proyecto de ensamblaje" />
-              <div class="image-overlay">
-                <h5>Ensamblaje de Muebles</h5>
+        <h2 class="text-center">Galería Slider</h2>
+        <div class="slider-container">
+          <div class="slider">
+            <div class="slide">
+              <img src="galeria/pintura1.jpeg" alt="Proyecto 1" />
+              <div class="slide-content">
+                <h3>Pintura Exterior</h3>
+                <p>
+                  Renovación integral de espacios con acabados de alta calidad y
+                  durabilidad.
+                </p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="galeria/PinturaC.png" alt="Proyecto 1" />
+              <div class="slide-content">
+                <h3>Pintura Interior</h3>
+                <p>
+                  Renovación integral de espacios con acabados de alta calidad y
+                  durabilidad.
+                </p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="galeria/ensamblaje.jpeg" alt="Proyecto 2" />
+              <div class="slide-content">
+                <h3>Ensamblaje Profesional</h3>
                 <p>
                   Armado profesional de mobiliario para Hogares y Oficinas,
                   asegurando calidad y durabilidad.
                 </p>
               </div>
             </div>
-          </div>
-
-          <div class="col-4 border-soft gallery-item" data-category="molduras">
-            <div class="image-container">
-              <img src="galeria/molduraC.png" alt="Proyecto de molduras" />
-              <div class="image-overlay">
-                <h5>Molduras Decorativas</h5>
+            <div class="slide">
+              <img src="galeria/emsamblajeC.png" alt="Proyecto 2" />
+              <div class="slide-content">
+                <h3>Ensamblaje Profesional</h3>
+                <p>
+                  Armado profesional de mobiliario para Hogares y Oficinas,
+                  asegurando calidad y durabilidad.
+                </p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="galeria/moldadura1.jpeg" alt="Proyecto 3" />
+              <div class="slide-content">
+                <h3>Molduras Decorativas</h3>
                 <p>
                   Acabados precisos y detallados en molduras, realzando la
                   elegancia de cada espacio.
@@ -140,19 +156,13 @@
               </div>
             </div>
           </div>
-
-          <div class="col-4 border-soft gallery-item" data-category="pintura">
-            <div class="image-container">
-              <img src="galeria/PinturaC.png" alt="Proyecto de pintura" />
-              <div class="image-overlay">
-                <h5>Pintura Interior-Exterior</h5>
-                <p>
-                  Renovación integral de espacios con acabados de alta calidad y
-                  durabilidad.
-                </p>
-              </div>
-            </div>
-          </div>
+          <button class="slider-btn prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="slider-dots"></div>
         </div>
       </div>
     </section>
@@ -296,5 +306,6 @@
     </footer>
     <script src="js/gallery.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

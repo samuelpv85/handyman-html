@@ -644,3 +644,64 @@ button[type="submit"]:hover {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+
+
+<section class="bg-light" id="3">
+<div class="container">
+  <h2 class="text-center">Galería de Proyectos Anteriores</h2>
+  <div class="gallery-filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="pintura">Pintura</button>
+    <button class="filter-btn" data-filter="ensamblaje">
+      Ensamblaje
+    </button>
+    <button class="filter-btn" data-filter="molduras">Molduras</button>
+  </div>
+  <div class="grid gallery-grid">
+    <div
+      class="col-4 border-soft gallery-item"
+      data-category="ensamblaje"
+    >
+      <div class="image-container">
+        <img src="galeria/emsamblajeC.png" alt="Proyecto de ensamblaje" />
+        <div class="image-overlay">
+          <h5>Ensamblaje de Muebles</h5>
+          <p>
+            Armado profesional de mobiliario para Hogares y Oficinas,
+            asegurando calidad y durabilidad.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4 border-soft gallery-item" data-category="molduras">
+      <div class="image-container">
+        <img src="galeria/molduraC.png" alt="Proyecto de molduras" />
+        <div class="image-overlay">
+          <h5>Molduras Decorativas</h5>
+          <p>
+            Acabados precisos y detallados en molduras, realzando la
+            elegancia de cada espacio.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4 border-soft gallery-item" data-category="pintura">
+      <div class="image-container">
+        <img src="galeria/PinturaC.png" alt="Proyecto de pintura" />
+        <div class="image-overlay">
+          <h5>Pintura Interior-Exterior</h5>
+          <p>
+            Renovación integral de espacios con acabados de alta calidad y
+            durabilidad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
