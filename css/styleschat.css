@@ -246,3 +246,224 @@ input:valid:not(:placeholder-shown),
 textarea:valid:not(:placeholder-shown) {
   border-color: #4CAF50;
 }
+
+.contact-form-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form-grid .grid {
+  margin-bottom: 1rem;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #ff5252;
+}
+
+.error-message {
+  color: #ff3333;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+input:invalid,
+textarea:invalid {
+  border-color: #ff3333;
+}
+
+input:valid,
+textarea:valid {
+  border-color: #4CAF50;
+}
+
+
+
+/* Estilos para el menú responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Media queries para responsive */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Responsive para servicios */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-card {
+    margin-bottom: 2rem;
+  }
+
+  /* Responsive para galería */
+  .gallery-filters {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Responsive para formulario */
+  .contact-form .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Responsive para footer */
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .col-4 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* Ajustes generales responsive */
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content img {
+    max-width: 150px;
+  }
+}
+
+/* menuHamburguesa */
+/* Estilos para el menú responsive */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Media queries para responsive */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+  }
+
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    z-index: 99;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Responsive para servicios */
+  .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .service-card {
+    margin-bottom: 2rem;
+  }
+
+  /* Responsive para galería */
+  .gallery-filters {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Responsive para formulario */
+  .contact-form .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Responsive para footer */
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer .col-4 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  /* Ajustes generales responsive */
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content img {
+    max-width: 150px;
+  }
+}
