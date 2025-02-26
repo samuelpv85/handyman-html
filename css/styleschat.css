@@ -166,6 +166,19 @@ body {
   opacity: 0.9;
   margin-bottom: var(--spacing-lg);
 }
+.hero-logo {
+  max-width: 200px;
+  height: auto;
+  margin-left: var(--spacing-sm);
+  vertical-align: middle;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
 
 @keyframes fadeIn {
   from {
@@ -184,7 +197,7 @@ body {
 /* Navegación */
 .nav {
   background-color: var(--color-primary);
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: var(--spacing-ss) var(--spacing-lg);
   position: sticky;
   /* position: fixed;  Cambiado de sticky a fixed - quitar espacio */
   /* width: 100%;     Añadido width 100%  quitar espacio - hero */
@@ -214,6 +227,8 @@ body {
   transition: all 0.3s ease;
   border-radius: 4px;
   position: relative;
+  white-space: nowrap; /* Add this line to prevent text wrapping */
+
 }
 
 .nav_link::after {
@@ -882,31 +897,31 @@ body {
 }
 
 .slide.prev-2 {
-  transform: translateX(-130%) scale(0.9);
+  transform: translateX(-130%) scale(0.85);
   opacity: 0.2;
   z-index: 0;
 }
 
 .slide.prev {
-  transform: translateX(-25%) scale(1);
+  transform: translateX(-25%) scale(0.95);
   opacity: 0.6;
   z-index: 1;
 }
 
 .slide.active {
-  transform: translateX(0) scale(1.1);
+  transform: translateX(0) scale(1.01);
   opacity: 1;
   z-index: 2;
 }
 
 .slide.next {
-  transform: translateX(25%) scale(1);
+  transform: translateX(25%) scale(0.95);
   opacity: 0.6;
   z-index: 1;
 }
 
 .slide.next-2 {
-  transform: translateX(130%) scale(0.9);
+  transform: translateX(130%) scale(0.85);
   opacity: 0.2;
   z-index: 0;
 }
@@ -1009,4 +1024,20 @@ body {
 .dot.active {
   background: var(--color-primary);
   transform: scale(1.2);
+}
+
+.lang-switch {
+  background: transparent;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  transition: all 0.3s ease;
+}
+
+.lang-switch:hover {
+  background: var(--color-light);
+  color: var(--color-primary);
 }

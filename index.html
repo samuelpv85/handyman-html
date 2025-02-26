@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <!-- <link href="css/css-iconos.css" rel="stylesheet"> -->
     <title>Handyman</title>
@@ -28,15 +31,18 @@
     </section>
 
     <nav class="nav">
-      <button class="menu-toggle" aria-label="Abrir menú">
+      <button class="menu-toggle" aria-label="Open menu">
         <i class="fas fa-bars"></i>
       </button>
       <div class="nav-links">
-        <a href="#" class="nav_link">Inicio</a>
-        <a href="#2" class="nav_link">Servicios</a>
-        <a href="#3" class="nav_link">Galería de proyectos</a>
-        <a href="#4" class="nav_link">Acerca de</a>
-        <a href="#5" class="nav_link">Contacto</a>
+        <a href="#" class="nav_link">Home</a>
+        <a href="#2" class="nav_link">Services</a>
+        <a href="#3" class="nav_link">Project Gallery</a>
+        <a href="#4" class="nav_link">About</a>
+        <a href="#5" class="nav_link">Contact</a>
+        <button class="lang-switch" onclick="toggleLanguage()">
+          <span class="lang-text">ES</span>
+        </button>
       </div>
     </nav>
 
@@ -394,5 +400,7 @@
     <script src="js/gallery.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/slider.js"></script>
+    <!-- Add before closing body tag -->
+    <script src="js/translations.js"></script>
   </body>
 </html>
