@@ -540,29 +540,95 @@ body {
   color: var(--color-primary);
   width: 20px;
 }
+/* SOCIAL */
 
-.social-grid {
+.social-media-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--spacing-sm);
-  margin: var(--spacing-md) 0;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0.9rem;
+  padding: var(--spacing-ss);
 }
 
-.social-item {
+.social-link {
   display: flex;
   align-items: center;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-sm);
-  border-radius: 0.5rem;
-  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  color: white;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 0.8rem;
 }
 
-.social-item:hover {
-  transform: translateY(-2px);
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+.social-link i {
+  font-size: 1.1rem;
+  margin-right: 0.6rem;
+}
+/* Ajustar el espacio del párrafo arriba de los botones */
+.contact-card p {
+  margin-bottom: 0.5rem; /* Reduce el espacio inferior del párrafo */
+}
+.social-link span {
+  font-weight: 500;
+}
+
+/* Estilos específicos para cada red social */
+.facebook {
+  background: linear-gradient(45deg, #1877f2, #3b5998);
+}
+
+.instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.twitter {
+  background: linear-gradient(45deg, #1da1f2, #0084b4);
+}
+
+.linkedin {
+  background: linear-gradient(45deg, #0077b5, #00a0dc);
+}
+
+.disabled-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+  position: relative;
+}
+
+.disabled-link span::after {
+  content: 'Próximamente disponible';
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.disabled-link:hover span::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Efecto hover adicional */
+.social-link:hover i {
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+}
+/* SOCIAL */
 .contact-card.disabled {
   opacity: 0.7;
   position: relative;
@@ -707,7 +773,7 @@ body {
   .nav-links.active {
     display: flex;
     animation: fadeIn 0.3s ease;
-    z-index: 1999; /* Ajustado para estar debajo del botón */
+    /* z-index: 1999; Ajustado para estar debajo del botón */
   }
 
   .nav_link {
