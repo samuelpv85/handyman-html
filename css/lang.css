@@ -1,0 +1,50 @@
+/* ... existing styles ... */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid var(--color-light);
+  color: var(--color-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.lang-flag {
+  width: 20px;
+  height: 15px;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flag-es {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NTAgNTAwIj48cGF0aCBmaWxsPSIjYzYwYjFlIiBkPSJNMCAwaDc1MHY1MDBIMHoiLz48cGF0aCBmaWxsPSIjZmZjNDAwIiBkPSJNMCAxMjVoNzUwdjI1MEgweiIvPjwvc3ZnPg==');
+}
+
+.flag-en {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3NjggNDgwIj48cGF0aCBmaWxsPSIjZmZmIiBkPSJNMCAwaDc2OHY0ODBIMHoiLz48ZyBmaWxsPSIjZDgwMDI3Ij48cGF0aCBkPSJNMCA0NGg3Njh2NDRIMHptMCA4OGg3Njh2NDRIMHptMCA4OGg3Njh2NDRIMHptMCA4OGg3Njh2NDRIMHptMCA4OGg3Njh2NDRIMHoiLz48L2c+PHBhdGggZmlsbD0iIzAwMDA1MiIgZD0iTTAgMGgzODR2MjY0SDB6Ii8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTMyIDQwbDgtMjQgOCAyNGgtMjB6bTY0IDBsOC0yNCA4IDI0aC0yMHptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6bTY0IDBsOC0yNCA4IDI0aC0yMHptNjQgMGw4LTI0IDggMjRoLTIwek02NCA4OGw4LTI0IDggMjRINjR6bTY0IDBsOC0yNCA4IDI0aC0yMHptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6bTY0IDBsOC0yNCA4IDI0aC0yMHpNMzIgMTM2bDgtMjQgOCAyNEgzMnptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6bTY0IDBsOC0yNCA4IDI0aC0yMHptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6TTY0IDE4NGw4LTI0IDggMjRINjR6bTY0IDBsOC0yNCA4IDI0aC0yMHptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6bTY0IDBsOC0yNCA4IDI0aC0yMHpNMzIgMjMybDgtMjQgOCAyNEgzMnptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6bTY0IDBsOC0yNCA4IDI0aC0yMHptNjQgMGw4LTI0IDggMjRoLTIwem02NCAwbDgtMjQgOCAyNGgtMjB6Ii8+PC9nPjwvc3ZnPg==');
+}
+
+.lang-switch:hover {
+  background: var(--color-light);
+  color: var(--color-primary);
+}
+
+/* Add data attributes for language content */
+[data-lang="es"] {
+  display: none;
+}
+
+/* When Spanish is active */
+html[lang="es"] [data-lang="en"] {
+  display: none;
+}
+
+html[lang="es"] [data-lang="es"] {
+  display: block;
+}

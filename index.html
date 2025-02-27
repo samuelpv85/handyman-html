@@ -1,9 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- English Meta Tags -->
+    <meta
+      name="description"
+      content="Professional maintenance, painting and remodeling services"
+      data-lang="en"
+    />
+    <meta
+      name="keywords"
+      content="handyman, painting, remodeling, maintenance, home improvement"
+      data-lang="en"
+    />
+    <meta
+      property="og:title"
+      content="Handyman - Professional Services"
+      data-lang="en"
+    />
+    <meta
+      property="og:description"
+      content="Expert maintenance services"
+      data-lang="en"
+    />
+    <!-- Spanish Meta Tags -->
+    <meta
+      name="description"
+      content="Servicios profesionales de mantenimiento, pintura y remodelación"
+      data-lang="es"
+    />
+    <meta
+      name="keywords"
+      content="handyman, pintura, remodelación, mantenimiento"
+      data-lang="es"
+    />
+    <meta
+      property="og:title"
+      content="Handyman - Servicios Profesionales"
+      data-lang="es"
+    />
+    <meta
+      property="og:description"
+      content="Expertos en servicios de mantenimiento"
+      data-lang="es"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -11,59 +54,67 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- <link href="css/css-iconos.css" rel="stylesheet"> -->
     <title>Handyman</title>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/pico.css"> -->
-    <link rel="stylesheet" href="css/pico.css" />
+    <!-- <link rel="stylesheet" href="css/pico.css" /> -->
     <link rel="stylesheet" href="css/styleschat.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/lang.css" />
   </head>
+
   <body>
+    <!-- Inicio -->
     <section class="section hero">
       <div class="hero-content">
         <h1 class="title">
-          Handyman <img src="logo.jpeg" alt="Handyman logo" />
+          <span data-translate="hero.title">Handyman</span>
+          <img src="logo.jpeg" alt="Handyman logo" />
         </h1>
-        <p class="hero-description">
-          Expertos en servicios de mantenimiento, pintura y remodelación
+        <p class="hero-description" data-translate="hero.description">
+          Experts in maintenance, painting and remodeling services
         </p>
-        <!-- <a href="#5" class="cta-button">¡Contáctanos ahora!</a> -->
       </div>
     </section>
 
-    <nav class="nav">
+    <!-- Nenu-nav -->
+    <nav class="nav" aria-label="Main navigation">
       <button class="menu-toggle" aria-label="Open menu">
         <i class="fas fa-bars"></i>
       </button>
       <div class="nav-links">
-        <a href="#" class="nav_link">Home</a>
-        <a href="#2" class="nav_link">Services</a>
-        <a href="#3" class="nav_link">Project Gallery</a>
-        <a href="#4" class="nav_link">About</a>
-        <a href="#5" class="nav_link">Contact</a>
-        <button class="lang-switch" onclick="toggleLanguage()">
+        <a href="#" class="nav_link" data-translate="nav.home">Home</a>
+        <a href="#2" class="nav_link" data-translate="nav.services">Services</a>
+        <a href="#3" class="nav_link" data-translate="nav.gallery"
+          >Project Gallery</a
+        >
+        <a href="#4" class="nav_link" data-translate="nav.about">About</a>
+        <a href="#5" class="nav_link" data-translate="nav.contact">Contact</a>
+        <button class="lang-switch" aria-label="Change language">
+          <span class="lang-flag flag-es"></span>
           <span class="lang-text">ES</span>
         </button>
       </div>
     </nav>
 
-    <section class="bg-white border-soft services" id="2">
+    <!-- Servicios -->
+    <section class="bg-white services" id="2">
       <div class="container">
-        <h2 class="text-center">Nuestros Servicios</h2>
+        <h2 class="text-center" data-translate="services.title">
+          Our Services
+        </h2>
         <div class="grid">
-          <div class="col-4 border-soft service-card">
+          <div class="col-3 border-soft service-card">
             <div class="service-header">
               <i class="fas fa-paint-roller service-icon"></i>
-              <h3>Pintura</h3>
+              <h3 data-translate="services.painting.title">Painting</h3>
             </div>
-            <p>
-              Nuestros expertos en pintura pueden transformar cualquier
-              habitación o exterior en un espacio elegante y acogedor. Ofrecemos
-              pintura de interiores y exteriores, lacado, texturizado y mucho
-              más.
+            <p data-translate="services.painting.description">
+              Our painting experts can transform any room or exterior into an
+              elegant and cozy space. We offer interior and exterior painting,
+              lacquering, texturing and much more.
             </p>
             <img
               src="galeria/pintura1.jpeg"
-              alt="Servicio de pintura"
+              alt="Painting service"
               class="w-100 p-2 border-soft"
             />
           </div>
@@ -71,17 +122,16 @@
           <div class="col-4 border-soft service-card">
             <div class="service-header">
               <i class="fas fa-tools service-icon"></i>
-              <h3>Ensamblaje</h3>
+              <h3 data-translate="services.assembly.title">Assembly</h3>
             </div>
-            <p>
-              Especialistas en el armado y ensamblaje de muebles, estructuras y
-              equipamiento para tu hogar u oficina. Garantizamos un trabajo
-              profesional y duradero, siguiendo las especificaciones técnicas de
-              cada producto.
+            <p data-translate="services.assembly.description">
+              Specialists in assembling furniture, structures and equipment for
+              your home or office. We guarantee professional and lasting work,
+              following the technical specifications of each product.
             </p>
             <img
               src="galeria/ensamblaje.jpeg"
-              alt="Servicio de ensamblaje"
+              alt="Assembly service"
               class="w-100 p-2 border-soft"
             />
           </div>
@@ -89,16 +139,16 @@
           <div class="col-4 border-soft service-card">
             <div class="service-header">
               <i class="fas fa-crown service-icon"></i>
-              <h3>Molduras</h3>
+              <h3 data-translate="services.moldings.title">Moldings</h3>
             </div>
-            <p>
-              Nuestro equipo de expertos en remodelación te ayuda a transformar
-              tu hogar u oficina con molduras de alta calidad. Ofrecemos diseño,
-              fabricación e instalación personalizada para cada proyecto.
+            <p data-translate="services.moldings.description">
+              Our remodeling team helps you transform your home or office with
+              high-quality moldings. We offer custom design, manufacturing and
+              installation for each project.
             </p>
             <img
               src="galeria/moldadura1.jpeg"
-              alt="Servicio de molduras"
+              alt="Moldings service"
               class="w-100 p-2 border-soft"
             />
           </div>
@@ -109,56 +159,64 @@
     <!-- galeria de proyectos -->
     <section class="slider-section" id="3">
       <div class="container">
-        <h2 class="text-center">Galería de Proyectos Anteriores</h2>
+        <h2 class="text-center" data-translate="gallery.title">
+          Previous Projects Gallery
+        </h2>
         <div class="slider-container">
           <div class="slider">
             <div class="slide">
-              <img src="galeria/pintura1.jpeg" alt="Proyecto 1" />
+              <img src="galeria/pintura1.jpeg" alt="Project 1" />
               <div class="slide-content">
-                <h3>Pintura Exterior</h3>
-                <p>
-                  Renovación integral de espacios con acabados de alta calidad y
-                  durabilidad.
+                <h3 data-translate="gallery.slide1.title">Exterior Painting</h3>
+                <p data-translate="gallery.slide1.description">
+                  Comprehensive renovation of spaces with high quality and
+                  durable finishes.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img src="galeria/PinturaC.png" alt="Proyecto 1" />
+              <img src="galeria/PinturaC.png" alt="Project 2" />
               <div class="slide-content">
-                <h3>Pintura Interior</h3>
-                <p>
-                  Renovación integral de espacios con acabados de alta calidad y
-                  durabilidad.
+                <h3 data-translate="gallery.slide2.title">Interior Painting</h3>
+                <p data-translate="gallery.slide2.description">
+                  Comprehensive renovation of spaces with high quality and
+                  durable finishes.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img src="galeria/ensamblaje.jpeg" alt="Proyecto 2" />
+              <img src="galeria/ensamblaje.jpeg" alt="Project 3" />
               <div class="slide-content">
-                <h3>Ensamblaje Profesional</h3>
-                <p>
-                  Armado profesional de mobiliario para Hogares y Oficinas,
-                  asegurando calidad y durabilidad.
+                <h3 data-translate="gallery.slide3.title">
+                  Professional Assembly
+                </h3>
+                <p data-translate="gallery.slide3.description">
+                  Professional assembly of furniture for Homes and Offices,
+                  ensuring quality and durability.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img src="galeria/emsamblajeC.png" alt="Proyecto 2" />
+              <img src="galeria/emsamblajeC.png" alt="Project 4" />
               <div class="slide-content">
-                <h3>Ensamblaje Profesional</h3>
-                <p>
-                  Armado profesional de mobiliario para Hogares y Oficinas,
-                  asegurando calidad y durabilidad.
+                <h3 data-translate="gallery.slide4.title">
+                  Professional Assembly
+                </h3>
+                <p data-translate="gallery.slide4.description">
+                  Professional assembly of furniture for Homes and Offices,
+                  ensuring quality and durability.
                 </p>
               </div>
             </div>
             <div class="slide">
-              <img src="galeria/moldadura1.jpeg" alt="Proyecto 3" />
+              <img src="galeria/moldadura1.jpeg" alt="Project 5" />
               <div class="slide-content">
-                <h3>Molduras Decorativas</h3>
-                <p>
-                  Acabados precisos y detallados en molduras, realzando la
-                  elegancia de cada espacio.
+                <h3 data-translate="gallery.slide5.title">
+                  Decorative Moldings
+                </h3>
+                <p data-translate="gallery.slide5.description">
+                  Precise and detailed finishes in moldings, enhancing the
+                  elegance of each space.
                 </p>
               </div>
             </div>
@@ -177,135 +235,90 @@
     <!-- Acerca de nosotros -->
     <section class="about-section" id="4">
       <div class="container">
-        <h2 class="text-center">Acerca de Nosotros</h2>
+        <h2 class="text-center" data-translate="about.title">About Us</h2>
         <div class="about-content">
-          <!-- <h2>Acerca de Nosotros</h2> -->
-          <p>
-            Somos especialistas en transformar espacios con servicios de
-            pintura, ensamblaje, molduras y carpinteria para hogares y negocios.
-            Con años de experiencia en el mercado, nos enorgullece ofrecer
-            resultados de alta calidad y un servicio personalizado que supera
-            las expectativas de nuestros clientes.
+          <p data-translate="about.p1">
+            We are specialists in transforming spaces with painting, assembly,
+            molding, and carpentry services for homes and businesses. With years
+            of experience in the market, we take pride in delivering
+            high-quality results and personalized service that exceeds our
+            clients' expectations.
           </p>
-          <p>
-            Nuestro equipo de expertos utilizan las mejores marcas y
-            herramientas para garantizar acabados impecables. Te asesoramos en
-            la elección de materiales, colores, texturas y diseños, asegurando
-            que cada proyecto refleje tu estilo único.
+          <p data-translate="about.p2">
+            Our team of experts uses the best brands and tools to ensure
+            impeccable finishes. We advise you on the choice of materials,
+            colors, textures, and designs, ensuring that each project reflects
+            your unique style.
           </p>
-          <p>
-            Nuestros servicios añade elegancia y sofisticación a cualquier
-            espacio. Trabajamos con precisión y eficiencia para entregar
-            resultados que enamoran.
+          <p data-translate="about.p3">
+            Our services add elegance and sophistication to any space. We work
+            with precision and efficiency to deliver results that you'll love.
           </p>
-          <p>
-            En nuestra galería, encontrarás proyectos realizados y testimonios
-            de clientes satisfechos que respaldan nuestro compromiso con la
-            excelencia. Nos esforzamos por ofrecer precios competitivos y
-            transparentes, asegurando la mejor relación calidad-precio.
+          <p data-translate="about.p4">
+            In our gallery, you'll find completed projects and testimonials from
+            satisfied clients that support our commitment to excellence. We
+            strive to offer competitive and transparent prices, ensuring the
+            best value for money.
           </p>
-          <p>
-            Si buscas un equipo confiable y profesional para tus proyectos,
-            ¡CONTÁCTANOS HOY MISMO! Estamos aquí para hacer realidad y
-            transformar espacios del hogar o negocio que siempre has soñado.
+          <p data-translate="about.p5">
+            If you're looking for a reliable and professional team for your
+            projects, CONTACT US TODAY! We're here to make your dream home or
+            business spaces a reality.
           </p>
           <div class="about-signature">HANDYMAN · Custom Work ·</div>
         </div>
       </div>
     </section>
 
-    <!-- contactanos -->
-    <!-- <section class="contact-section" id="">
+    <!-- Contactanos - Redes Sociales -->
+    <section class="bg-white contact-cards" id="5">
       <div class="container">
-        <article class="contact-form">
-          <h2>Contactanos</h2>
-          <form class="grid">
-            <input
-              type="text"
-              id="firstname"
-              name="firstname"
-              placeholder="First name"
-              aria-label="First name"
-              required=""
-            />
-            <input
-              type="text"
-              id="firstsurname"
-              name="firstsurname"
-              placeholder="first surname"
-              aria-label="first surname"
-              required=""
-            />
-          </form>
-          <form class="grid">
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              placeholder="Phone"
-              aria-label="Phone"
-              required=""
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email address"
-              aria-label="Email address"
-              required=""
-            />
-          </form>
-          <div class="form-group full-width">
-            <textarea
-              id="message"
-              name="message"
-              required
-              placeholder="Mensaje"
-              rows="4"
-            ></textarea>
-            <span class="error-message">Por favor ingrese su mensaje</span>
-          </div>
-          <button type="submit" onclick="event.preventDefault()">Enviar</button>
-        </article>
-      </div>
-    </section> -->
-
-    <!-- Agregar antes del footer -->
-    <section class="bg-white border-soft contact-cards" id="5">
-      <div class="container">
-        <h2 class="text-center">Contáctanos</h2>
+        <h2 class="text-center" data-translate="contact.title">Contact Us</h2>
         <div class="grid">
-          <!-- Tarjeta de Información de Contacto -->
+          <!-- Contact Information Card -->
           <div class="col-4 border-soft contact-card">
             <div class="service-header">
               <i class="fas fa-building service-icon"></i>
-              <h3>Información de Contacto</h3>
+              <h3 data-translate="contact.info.title">Contact Information</h3>
             </div>
             <div class="contact-details">
               <p>
-                <i class="fas fa-map-marker-alt"></i> 1234 Calle Principal,
-                Ciudad, Estado
+                <i class="fas fa-map-marker-alt"></i>
+                <span data-translate="contact.info.address"
+                  >1234 Main Street, City, State</span
+                >
               </p>
-              <p><i class="fas fa-phone"></i> (123) 456-7890</p>
-              <p><i class="fas fa-envelope"></i> info@handyman.com</p>
-              <p><i class="fas fa-clock"></i> Lun - Sáb: 9:00 AM - 6:00 PM</p>
+              <p>
+                <i class="fas fa-phone"></i>
+                <span data-translate="contact.info.phone">(123) 456-7890</span>
+              </p>
+              <p>
+                <i class="fas fa-envelope"></i>
+                <span data-translate="contact.info.email"
+                  >info@handyman.com</span
+                >
+              </p>
+              <p>
+                <i class="fas fa-clock"></i>
+                <span data-translate="contact.info.hours"
+                  >Mon - Sat: 9:00 AM - 6:00 PM</span
+                >
+              </p>
             </div>
-            <!-- <img
-              src="galeria/contact-office.jpg"
-              alt="Nuestra Oficina"
-              class="w-100 p-2 border-soft"
-            /> -->
           </div>
 
-          <!-- Tarjeta de Redes Sociales -->
+          <!-- Social Media Card -->
           <div class="col-4 border-soft contact-card">
             <div class="service-header">
               <i class="fas fa-share-alt service-icon"></i>
-              <h3>Redes Sociales</h3>
+              <h3 data-translate="contact.social.title">Social Media</h3>
             </div>
-            <p>
-              Síguenos en nuestras redes sociales para ver nuestros últimos
-              proyectos y novedades.
+            <p
+              class="social-description"
+              data-translate="contact.social.description"
+            >
+              Follow us on our social media to see our latest projects and
+              updates.
             </p>
             <div class="social-media-links">
               <a
@@ -326,7 +339,7 @@
               </a>
               <a class="social-link twitter disabled-link">
                 <i class="fab fa-twitter"></i>
-                <span>Twitter</span>
+                <span>X</span>
               </a>
               <a class="social-link linkedin disabled-link">
                 <i class="fab fa-linkedin-in"></i>
@@ -335,68 +348,64 @@
             </div>
           </div>
 
-          <!-- Tarjeta de Formulario (Desactivado) -->
+          <!-- Contact Form Card -->
           <div class="col-4 border-soft contact-card disabled">
             <div class="service-header">
               <i class="fas fa-paper-plane service-icon"></i>
-              <h3>Formulario de Contacto</h3>
+              <h3 data-translate="contact.form.title">Contact Form</h3>
             </div>
             <form class="contact-form-mini">
-              <input type="text" placeholder="Nombre" disabled />
-              <input type="email" placeholder="Email" disabled />
-              <textarea placeholder="Mensaje" disabled></textarea>
-              <button type="button" disabled>Enviar Mensaje</button>
+              <input
+                type="text"
+                data-translate="contact.form.name"
+                placeholder="Name"
+                disabled
+              />
+              <input
+                type="email"
+                data-translate="contact.form.email"
+                placeholder="Email"
+                disabled
+              />
+              <textarea
+                data-translate="contact.form.message"
+                placeholder="Message"
+                disabled
+              ></textarea>
+              <button
+                type="button"
+                data-translate="contact.form.submit"
+                disabled
+              >
+                Send Message
+              </button>
             </form>
             <div class="coming-soon">
-              <p>Próximamente disponible</p>
+              <p data-translate="contact.form.coming-soon">Coming soon</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="bg-dark border-soft">
-      <div class="container">
-        <!-- <h2>Contacto</h2> -->
-        <!-- <div class="contact-info">
-          <h3>Información de contacto</h3>
-          <ul>
-            <li>
-              <i class="fas fa-map-marker-alt"></i> Dirección: 1234 Calle
-              Principal, Ciudad, Estado
-            </li>
-            <li><i class="fas fa-phone"></i> Teléfono: (123) 456-7890</li>
-            <li><i class="fas fa-envelope"></i> Correo: info@handyman.com</li>
-          </ul>
-        </div> -->
-        <div class="row">
-          <div class="col-4">
-            <h3>Síguenos en</h3>
-            <ul class="social">
-              <li>
-                <a href="#"><i class="fab fa-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </li>
-            </ul>
-          </div>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Handyman Custom Work</h3>
+          <p data-translate="footer.description">
+            We transform spaces with quality and professionalism. Your
+            satisfaction is our priority.
+          </p>
         </div>
-        <hr />
-        <p class="text-center">
-          © 2023 Handyman. Todos los derechos reservados.
+      </div>
+      <div class="footer-bottom">
+        <p data-translate="footer.copyright">
+          © 2023 Handyman Custom Work. All rights reserved.
         </p>
       </div>
     </footer>
+
     <script src="js/gallery.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/slider.js"></script>

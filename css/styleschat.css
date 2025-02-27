@@ -1,58 +1,69 @@
-  
-  /* +++++++++++++++++++++++++++++++++++++++++++ */
+/* +++++++++++++++++++++++++++++++++++++++++++ */
+/* Agregar al inicio del archivo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .border-soft {
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+/* Clase para bordes suaves */
+.border-soft {
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
 
-  /* FOOTER */
+/* FOOTER */
 
-  footer {
-    color: #fff;
-    padding: 50px 0;
-    font-size: 16px;
-  }
-  
-  footer h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  footer p {
-    margin-bottom: 15px;
-  }
-  
-  .social {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .social li {
-    margin-right: 15px;
-  }
-  
-  .social a {
-    color: #fff;
-    font-size: 24px;
-  }
-  
-  .social a:hover {
-    color: #f8b500;
-  }
-  
-  hr {
-    border: none;
-    border-top: 1px solid #b42d2d;
-    margin: 30px 0;
-  }
-  
 
-  /* ++++++++++++++++++++++ */
+
+
+/* Estilos para la línea horizontal */
+hr {
+  border: none; /* Quita el borde */
+  /* border-top: 1px solid #b42d2d; Línea superior */
+  /* margin: 30px 0; Margen superior e inferior */
+}
+
+/* Agregar nuevo separador de secciones */
+.services::before,
+.slider-section::before,
+.about-section::before,
+.contact-cards::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-primary),
+    var(--color-secondary),
+    var(--color-primary),
+    transparent
+  );
+  filter: drop-shadow(0 0 5px var(--color-primary));
+  opacity: 0.5;
+}
+
+/* Asegurar que las secciones tengan posición relativa para el separador */
+.services,
+.slider-section,
+.about-section,
+.contact-cards {
+  padding: var(--spacing-sm) 0;  /* Reducido de --spacing-xl a --spacing-md */
+  position: relative;
+  margin-top: 0;
+}
+
+/* ++++++++++++++++++++++ */
 /* Variables Globales */
 :root {
   /* Colores */
@@ -85,165 +96,173 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Agregar variables para border-radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  
+  /* Agregar variables para transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
 }
+
 /* Ajuste global para mantener alineación */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-  width: 100%;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: 0 var(--spacing-md); /* Padding interno */
+  width: 100%; /* Ancho completo */
 }
 
 /* Estilo global para títulos de sección */
 .text-center {
-  color: var(--color-dark);
-  font-size: var(--font-size-2xl);
-  font-weight: 600;
-  margin-bottom: var(--spacing-lg);
+  color: var(--color-dark); /* Color del texto */
+  font-size: var(--font-size-2xl); /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  margin-bottom: var(--spacing-sm); /* Margen inferior */
 }
 
 .services h2,
 .gallery-section h2,
 .about-section h2,
 .contact-form h2 {
-  color: var(--color-dark);
-  font-size: var(--font-size-2xl);
-  font-weight: 600;
-  margin-bottom: var(--spacing-lg);
+  color: var(--color-dark); /* Color del texto */
+  font-size: var(--font-size-2xl); /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  margin-bottom: var(--spacing-sm); /* Margen inferior */
 }
 
 /* Estilos Base */
 body {
-  font-family: var(--font-primary);
-  color: var(--color-text);
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: var(--color-light);
+  font-family: var(--font-primary); /* Fuente principal */
+  color: var(--color-text); /* Color del texto */
+  line-height: 1.6; /* Altura de línea */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
+  background-color: var(--color-light); /* Color de fondo */
 }
 
 /* Sección Hero */
 .section.hero {
-  min-height: 100vh;
-  width: 100%;
+  min-height: 100vh; /* Altura mínima de la sección */
+  width: 100%; /* Ancho completo */
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.7)
-  ), url("../fondoHeader.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  ), url("../fondoHeader.png"); /* Imagen de fondo con degradado */
+  background-size: cover; /* Cubre todo el espacio */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Fija la imagen */
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  position: relative; /* Posición relativa */
   margin: 0;         /* Eliminar cualquier margen */
   padding: 0;        /* Eliminar cualquier padding */
   top: 0;           /* Asegurar que comience desde arriba */
 }
 
 .hero-content {
-  text-align: center;
-  color: var(--color-light);
-  max-width: 800px;
-  padding: var(--spacing-lg);
-  backdrop-filter: blur(8px);
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  animation: fadeIn 1s ease-out;
+  text-align: center; /* Alineación del texto al centro */
+  color: var(--color-light); /* Color del texto */
+  max-width: 800px; /* Ancho máximo */
+  padding: var(--spacing-lg); /* Padding interno */
+  backdrop-filter: blur(8px); /* Efecto de desenfoque */
+  background: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+  border-radius: 1rem; /* Bordes redondeados */
+  animation: fadeIn 1s ease-out; /* Animación de entrada */
 }
 
 .hero-content .title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 700;
-  margin-bottom: var(--spacing-md);
-  line-height: 1.2;
-  color: var(--color-light);
+  font-size: clamp(2rem, 5vw, 4rem); /* Tamaño de la fuente responsive */
+  font-weight: 700; /* Grosor de la fuente */
+  margin-bottom: var(--spacing-md); /* Margen inferior */
+  line-height: 1.2; /* Altura de línea */
+  color: var(--color-light); /* Color del texto */
 }
 
 .hero-description {
-  font-size: var(--font-size-xl);
-  opacity: 0.9;
-  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-xl); /* Tamaño de la fuente */
+  opacity: 0.9; /* Opacidad */
+  margin-bottom: var(--spacing-lg); /* Margen inferior */
 }
 .hero-logo {
-  max-width: 200px;
-  height: auto;
-  margin-left: var(--spacing-sm);
-  vertical-align: middle;
+  max-width: 200px; /* Ancho máximo */
+  height: auto; /* Altura automática */
+  margin-left: var(--spacing-sm); /* Margen izquierdo */
+  vertical-align: middle; /* Alineación vertical */
 }
 
 .title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-md);
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  gap: var(--spacing-md); /* Espacio entre elementos */
 }
 
 @keyframes fadeIn {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; /* Opacidad inicial */
+    transform: translateY(20px); /* Transformación inicial */
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Opacidad final */
+    transform: translateY(0); /* Transformación final */
   }
 }
 /* Sección Hero */
 
-
 /* -- ------------------------------ */
 /* Navegación */
 .nav {
-  background-color: var(--color-primary);
-  padding: var(--spacing-ss) var(--spacing-lg);
-  position: sticky;
+  background-color: var(--color-primary); /* Color de fondo */
+  padding: var(--spacing-ss) var(--spacing-lg); /* Padding interno */
+  position: sticky; /* Posición sticky */
   /* position: fixed;  Cambiado de sticky a fixed - quitar espacio */
   /* width: 100%;     Añadido width 100%  quitar espacio - hero */
-  top: 0;
-  z-index: 1000;
-  box-shadow: var(--shadow-md);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0; /* Posición superior */
+  z-index: 1000; /* Índice z */
+  box-shadow: var(--shadow-md); /* Sombra */
+
+  width: 100%; /* Ancho completo */
 }
 
 .nav-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--spacing-xl);
-  max-width: 1200px;
-  margin: 0 auto;
+  display: flex; /* Flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: var(--spacing-xl); /* Espacio entre elementos */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
 }
 
 .nav_link {
-  color: var(--color-light);
-  text-decoration: none;
-  font-size: var(--font-size-lg);
-  font-weight: 500;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  transition: all 0.3s ease;
-  border-radius: 4px;
-  position: relative;
-  white-space: nowrap; /* Add this line to prevent text wrapping */
-
+  color: var(--color-light); /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  font-size: var(--font-size-lg); /* Tamaño de la fuente */
+  font-weight: 500; /* Grosor de la fuente */
+  padding: var(--spacing-xs) var(--spacing-sm); /* Padding interno */
+  transition: all 0.3s ease; /* Transición suave */
+  border-radius: 4px; /* Bordes redondeados */
+  position: relative; /* Posición relativa */
+  white-space: nowrap; /* Evita el salto de línea */
 }
 
 .nav_link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-light);
-  transition: width 0.3s ease;
+  content: ''; /* Contenido vacío */
+  position: absolute; /* Posición absoluta */
+  bottom: -2px; /* Posición inferior */
+  left: 0; /* Posición izquierda */
+  width: 0; /* Ancho inicial */
+  height: 2px; /* Altura */
+  background-color: var(--color-light); /* Color de fondo */
+  transition: width 0.3s ease; /* Transición suave */
 }
 
 .nav_link:hover::after {
-  width: 100%;
+  width: 100%; /* Ancho completo al pasar el mouse */
 }
 
 /* .menu-toggle {
@@ -257,787 +276,784 @@ body {
 } */
 
 .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--color-light);
-  font-size: var(--font-size-2xl);
-  cursor: pointer;
-  padding: var(--spacing-xs);
-  position: fixed; 
-  right: var(--spacing-sm);
-  top: var(--spacing-sm);
-  z-index: 2000;
-  background-color: var(--color-primary);
-  border-radius: 4px;
+  display: none; /* Oculta el botón por defecto */
+
 }
 
 /* Navegación */
 
-/* sssssssssssssssssssssssss */
-
   /* Iconos Redes sociales */
   /*Colores de Marca*/
 .fa-facebook {
-	background:#1877f2;
+	background:#1877f2; /* Color de fondo para Facebook */
 } 
 
 .fa-linkedin {
-	background:#0a66c2;
-}
-
-.fa-twitter {
-	background: #1da1f2;
+	background:#0a66c2; /* Color de fondo para LinkedIn */
 }
 
 .fa-instagram {
-	background: #c32aa3;
+	background: #c32aa3; /* Color de fondo para Instagram */
 }
 
 .fa-youtube {
-	background: #ff0000;
+	background: #ff0000; /* Color de fondo para YouTube */
 }
 
 /*Agregar estilos adicionales a iconos*/
 .redes {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	display: flex; /* Flexbox para alinear elementos */
+	align-items: center; /* Centra verticalmente */
+	justify-content: center; /* Centra horizontalmente */
 }
 
 .redes i {
-	color: #fff;
-	width: 40px;
-	height: 40px;
-    margin: 1px;
-	font-size: 25px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	color: #fff; /* Color del texto */
+	width: 40px; /* Ancho */
+	height: 40px; /* Altura */
+    margin: 1px; /* Margen */
+	font-size: 25px; /* Tamaño de la fuente */
+	display: flex; /* Flexbox para alinear elementos */
+	align-items: center; /* Centra verticalmente */
+	justify-content: center; /* Centra horizontalmente */
 }
 
 .redes a {
-	text-decoration: none;
+	text-decoration: none; /* Sin subrayado */
 }
 
 .redes i:hover {
-    -ms-transform: scale(1.1); 
-    -webkit-transform: scale(1.1); 
-    transform: scale(1.1); 
-	opacity: .9;
+    -ms-transform: scale(1.1); /* Escala al pasar el mouse */
+    -webkit-transform: scale(1.1); /* Escala al pasar el mouse */
+    transform: scale(1.1); /* Escala al pasar el mouse */
+	opacity: .9; /* Opacidad */
 }
 
 /* Estilos para los servicios */
 .services {
-  padding: var(--spacing-xl) 0;
-  background-color: var(--color-light);
+  padding: var(--spacing-xl) 0; /* Padding interno */
+  background-color: var(--color-light); /* Color de fondo */
 }
 
 .services .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-  margin: 0;
+  display: grid; /* Grid para alinear elementos */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: var(--spacing-md); /* Espacio entre elementos */
+  margin: 0; /* Sin margen */
 }
 
 .service-card {
-  background: white;
-  border-radius: 1rem;
-  padding: var(--spacing-lg);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: var(--shadow-sm);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  background: white; /* Color de fondo */
+  border-radius: 1rem; /* Bordes redondeados */
+  padding: var(--spacing-lg); /* Padding interno */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  box-shadow: var(--shadow-sm); /* Sombra */
+  height: 100%; /* Altura completa */
+  display: flex; /* Flexbox para alinear elementos */
+  flex-direction: column; /* Dirección de la columna */
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px); /* Transformación al pasar el mouse */
+  box-shadow: var(--shadow-lg); /* Sombra al pasar el mouse */
 }
 
 .service-header {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  gap: var(--spacing-sm); /* Espacio entre elementos */
+  margin-bottom: var(--spacing-xs); /* Margen inferior */
 }
 
 .service-header h3 {
-  color: var(--color-dark);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin: 0;
+  color: var(--color-dark); /* Color del texto */
+  font-size: var(--font-size-xl); /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  margin: 0; /* Sin margen */
 }
 
 .service-icon {
-  font-size: var(--font-size-4xl);
-  color: var(--color-primary);
-  background: var(--color-light);
-  padding: var(--spacing-sm);
-  border-radius: 12px;
-  transition: all 0.3s ease;
+  font-size: var(--font-size-4xl); /* Tamaño de la fuente */
+  color: var(--color-primary); /* Color del texto */
+  background: var(--color-light); /* Color de fondo */
+  padding: var(--spacing-sm); /* Padding interno */
+  border-radius: 12px; /* Bordes redondeados */
+  transition: all 0.3s ease; /* Transición suave */
 }
 
 .service-card:hover .service-icon {
-  background: var(--color-primary);
-  color: white;
-  transform: rotate(360deg);
+  background: var(--color-primary); /* Color de fondo al pasar el mouse */
+  color: white; /* Color del texto al pasar el mouse */
+  transform: rotate(360deg); /* Rotación al pasar el mouse */
 }
 
 .service-card p {
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-xs);
-  flex-grow: 1;
+  color: var(--color-text-light); /* Color del texto */
+  margin-bottom: var(--spacing-xs); /* Margen inferior */
+  flex-grow: 1; /* Crecimiento flexible */
 }
 
 .service-card img {
-  width: 100%;
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease;
+  width: 100%; /* Ancho completo */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  transition: transform 0.3s ease; /* Transición suave */
 }
 
 .service-card:hover img {
-  transform: scale(1.02);
+  transform: scale(1.02); /* Escala al pasar el mouse */
 }
 
 /* Estilos para la galería */
 /* ====== Galería ====== */
 .gallery-section {
-  padding: var(--spacing-xl) 0;
-  background: var(--color-light);
+  padding: var(--spacing-xl) 0; /* Padding interno */
+  background: var(--color-light); /* Color de fondo */
 }
 
 .gallery-filters {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
-  flex-wrap: nowrap;
-  padding: 0 var(--spacing-md);
+  display: flex; /* Flexbox para alinear elementos */
+  justify-content: center; /* Centra horizontalmente */
+  gap: var(--spacing-sm); /* Espacio entre elementos */
+  margin-bottom: var(--spacing-xs); /* Margen inferior */
+  flex-wrap: nowrap; /* Sin salto de línea */
+  padding: 0 var(--spacing-md); /* Padding interno */
 }
 
 .filter-btn {
-  padding: var(--spacing-sm) var(--spacing-lg);
-  border: 2px solid var(--color-primary);
-  background: transparent;
-  color: var(--color-primary);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 2rem;
-  font-weight: 500;
-  font-size: var(--font-size-base);
-  white-space: nowrap;
+  padding: var(--spacing-sm) var(--spacing-lg); /* Padding interno */
+  border: 2px solid var(--color-primary); /* Borde */
+  background: transparent; /* Fondo transparente */
+  color: var(--color-primary); /* Color del texto */
+  cursor: pointer; /* Cursor de puntero */
+  transition: all 0.3s ease; /* Transición suave */
+  border-radius: 2rem; /* Bordes redondeados */
+  font-weight: 500; /* Grosor de la fuente */
+  font-size: var(--font-size-base); /* Tamaño de la fuente */
+  white-space: nowrap; /* Sin salto de línea */
 }
 
 .filter-btn:hover {
-  background: var(--color-primary);
-  color: var(--color-light);
-  transform: translateY(-2px);
+  background: var(--color-primary); /* Color de fondo al pasar el mouse */
+  color: var(--color-light); /* Color del texto al pasar el mouse */
+  transform: translateY(-2px); /* Transformación al pasar el mouse */
 }
 
 .filter-btn.active {
-  background: var(--color-primary);
-  color: var(--color-light);
-  box-shadow: var(--shadow-md);
+  background: var(--color-primary); /* Color de fondo */
+  color: var(--color-light); /* Color del texto */
+  box-shadow: var(--shadow-md); /* Sombra */
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-  margin: 0;
-  padding: 0;
+  display: grid; /* Grid para alinear elementos */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: var(--spacing-md); /* Espacio entre elementos */
+  margin: 0; /* Sin margen */
+  padding: 0; /* Sin padding */
 }
 
 .image-container {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease;
+  position: relative; /* Posición relativa */
+  overflow: hidden; /* Oculta el desbordamiento */
+  border-radius: var(--radius-md); /* Bordes redondeados */
+  box-shadow: var(--shadow-sm); /* Sombra */
+  transition: transform 0.3s ease; /* Transición suave */
 }
 
 .image-container img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  width: 100%; /* Ancho completo */
+  height: 300px; /* Altura fija */
+  object-fit: cover; /* Cubre el espacio */
+  transition: transform 0.5s ease; /* Transición suave */
 }
 
 .image-container:hover img {
-  transform: scale(1.1);
+  transform: scale(1.1); /* Escala al pasar el mouse */
 }
 
 .image-overlay {
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  padding: var(--spacing-md);
+  position: absolute; /* Posición absoluta */
+  bottom: -100%; /* Posición inferior */
+  left: 0; /* Posición izquierda */
+  width: 100%; /* Ancho completo */
+  padding: var(--spacing-md); /* Padding interno */
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.9),
     rgba(0, 0, 0, 0.6)
-  );
-  color: var(--color-light);
-  transition: bottom 0.3s ease;
+  ); /* Degradado */
+  color: var(--color-light); /* Color del texto */
+  transition: bottom 0.3s ease; /* Transición suave */
 }
 
 .image-container:hover .image-overlay {
-  bottom: 0;
+  bottom: 0; /* Posición inferior al pasar el mouse */
 }
 
 .image-overlay h5 {
-  font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-xs);
-  font-weight: 600;
+  font-size: var(--font-size-lg); /* Tamaño de la fuente */
+  margin-bottom: var(--spacing-xs); /* Margen inferior */
+  font-weight: 600; /* Grosor de la fuente */
 }
 
 .image-overlay p {
-  font-size: var(--font-size-base);
-  opacity: 0.9;
+  font-size: var(--font-size-base); /* Tamaño de la fuente */
+  opacity: 0.9; /* Opacidad */
 }
 
 
 /* Estilos para la sección de contacto */
-/* Estilos para la sección de contacto */
-/* Estilos para la sección de contacto */
-
 .contact-cards {
-  padding: var(--spacing-xl) 0;
-  background-color: var(--color-light);
-  width: 100%;
-  overflow: hidden; /* Añadido para prevenir desbordamiento */
+  padding: var(--spacing-xl) 0; /* Padding interno */
+  background-color: var(--color-light); /* Color de fondo */
+  width: 100%; /* Ancho completo */
+  overflow: hidden; /* Oculta el desbordamiento */
 }
 
 
 /* Reemplazar los estilos existentes de .contact-cards .grid con esto */
 .services .grid,
 .contact-cards .grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-md);
-  margin: 0;
-  width: 100%;
+  display: grid; /* Grid para alinear elementos */
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+  gap: var(--spacing-md); /* Espacio entre elementos */
+  margin: 0; /* Sin margen */
+  width: 100%; /* Ancho completo */
 }
 
 .contact-card {
-  min-height: 300px; /* Añadido para mantener altura consistente */
-  background: white;
-  border-radius: 1rem;
-  padding: var(--spacing-md);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: var(--shadow-sm);
-  display: flex;
-  flex-direction: column;
+  min-height: 300px; /* Altura mínima */
+  background: white; /* Color de fondo */
+  border-radius: 1rem; /* Bordes redondeados */
+  padding: var(--spacing-md); /* Padding interno */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  box-shadow: var(--shadow-sm); /* Sombra */
+  display: flex; /* Flexbox para alinear elementos */
+  flex-direction: column; /* Dirección de la columna */
 }
 
 .contact-details {
-  padding: var(--spacing-sm);
+  padding: var(--spacing-sm); /* Padding interno */
 }
 
 .contact-details p {
-  margin: var(--spacing-xs) 0;
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  color: var(--color-text-light);
-  font-size: var(--font-size-base);
+  margin: var(--spacing-xs) 0; /* Margen superior e inferior */
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  gap: var(--spacing-sm); /* Espacio entre elementos */
+  color: var(--color-text-light); /* Color del texto */
+  font-size: var(--font-size-base); /* Tamaño de la fuente */
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px); /* Transformación al pasar el mouse */
+  box-shadow: var(--shadow-lg); /* Sombra al pasar el mouse */
 }
 
 .contact-details i {
-  color: var(--color-primary);
-  width: 20px;
+  color: var(--color-primary); /* Color del texto */
+  width: 20px; /* Ancho */
 }
 /* SOCIAL */
 
 .social-media-links {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 0.9rem;
-  padding: var(--spacing-ss);
+  display: grid; /* Grid para alinear elementos */
+  grid-template-columns: repeat(1, 1fr); /* Una columna */
+  gap: 0.9rem; /* Espacio entre elementos */
+  padding: var(--spacing-ss); /* Padding interno */
 }
 
 .social-link {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  color: white;
-  text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-size: 0.8rem;
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  padding: 0.5rem 1rem; /* Padding interno */
+  border-radius: 8px; /* Bordes redondeados */
+  color: white; /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  font-size: 0.8rem; /* Tamaño de la fuente */
 }
 
 .social-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateY(-3px); /* Transformación al pasar el mouse */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Sombra al pasar el mouse */
 }
 
 .social-link i {
-  font-size: 1.1rem;
-  margin-right: 0.6rem;
+  font-size: 1.1rem; /* Tamaño de la fuente */
+  margin-right: 0.6rem; /* Margen derecho */
 }
 /* Ajustar el espacio del párrafo arriba de los botones */
 .contact-card p {
   margin-bottom: 0.5rem; /* Reduce el espacio inferior del párrafo */
 }
 .social-link span {
-  font-weight: 500;
+  font-weight: 500; /* Grosor de la fuente */
+}
+.social-description {
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-base);
 }
 
 /* Estilos específicos para cada red social */
 .facebook {
-  background: linear-gradient(45deg, #1877f2, #3b5998);
+  background: linear-gradient(45deg, #1877f2, #3b5998); /* Degradado para Facebook */
 }
 
 .instagram {
-  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); /* Degradado para Instagram */
 }
 
 .twitter {
-  background: linear-gradient(45deg, #1da1f2, #0084b4);
+  background: linear-gradient(45deg, #000000, #1D1F23); /* Degradado para X */
 }
 
 .linkedin {
-  background: linear-gradient(45deg, #0077b5, #00a0dc);
+  background: linear-gradient(45deg, #0077b5, #00a0dc); /* Degradado para LinkedIn */
 }
 
 .disabled-link {
-  opacity: 0.5;
-  cursor: not-allowed;
-  position: relative;
+  opacity: 0.5; /* Opacidad */
+  cursor: not-allowed; /* Cursor no permitido */
+  position: relative; /* Posición relativa */
 }
 
 .disabled-link span::after {
-  content: 'Próximamente disponible';
-  position: absolute;
-  left: 50%;
-  top: -40px;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 1000;
+  content: 'Próximamente disponible'; /* Texto */
+  position: absolute; /* Posición absoluta */
+  left: 50%; /* Posición izquierda */
+  top: -40px; /* Posición superior */
+  transform: translateX(-50%); /* Transformación */
+  background: rgba(0, 0, 0, 0.8); /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 8px 12px; /* Padding interno */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 12px; /* Tamaño de la fuente */
+  white-space: nowrap; /* Sin salto de línea */
+  opacity: 0; /* Opacidad inicial */
+  visibility: hidden; /* Visibilidad inicial */
+  transition: all 0.3s ease; /* Transición suave */
+  z-index: 1000; /* Índice z */
 }
 
 .disabled-link:hover span::after {
-  opacity: 1;
-  visibility: visible;
+  opacity: 1; /* Opacidad al pasar el mouse */
+  visibility: visible; /* Visibilidad al pasar el mouse */
 }
 
 /* Efecto hover adicional */
 .social-link:hover i {
-  transform: rotate(360deg);
-  transition: transform 0.5s ease;
+  transform: rotate(360deg); /* Rotación al pasar el mouse */
+  transition: transform 0.5s ease; /* Transición suave */
 }
 /* SOCIAL */
 .contact-card.disabled {
-  opacity: 0.7;
-  position: relative;
+  opacity: 0.7; /* Opacidad */
+  position: relative; /* Posición relativa */
 }
 
 .contact-form-mini input,
 .contact-form-mini textarea {
-  width: 100%;
-  margin-bottom: var(--spacing-sm);
-  padding: var(--spacing-sm);
-  border: 1px solid var(--color-text-light);
-  border-radius: 0.5rem;
-  opacity: 0.5;
+  width: 100%; /* Ancho completo */
+  margin-bottom: var(--spacing-sm); /* Margen inferior */
+  padding: var(--spacing-sm); /* Padding interno */
+  border: 1px solid var(--color-text-light); /* Borde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  opacity: 0.5; /* Opacidad */
 }
 
 .contact-form-mini textarea {
-  height: 100px;
-  resize: none;
+  height: 100px; /* Altura */
+  resize: none; /* Sin redimensionar */
 }
 
 .contact-form-mini button {
-  width: 100%;
-  padding: var(--spacing-sm);
-  background: var(--color-primary);
-  color: var(--color-light);
-  border: none;
-  border-radius: 0.5rem;
-  opacity: 0.5;
+  width: 100%; /* Ancho completo */
+  padding: var(--spacing-sm); /* Padding interno */
+  background: var(--color-primary); /* Color de fondo */
+  color: var(--color-light); /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  opacity: 0.5; /* Opacidad */
 }
 
 .coming-soon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--color-light);
-  padding: var(--spacing-md);
-  border-radius: 0.5rem;
-  text-align: center;
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Posición superior */
+  left: 50%; /* Posición izquierda */
+  transform: translate(-50%, -50%); /* Transformación */
+  background: rgba(0, 0, 0, 0.8); /* Color de fondo */
+  color: var(--color-light); /* Color del texto */
+  padding: var(--spacing-md); /* Padding interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  text-align: center; /* Alineación del texto al centro */
 }
 /* Estilos para la sección de contacto */
 
 
 /* Agregar estilos ABOUT */
 .about-section {
-  padding: var(--spacing-xl) 0;
-  background-color: var(--color-light);
+  padding: var(--spacing-xl) 0; /* Padding interno */
+  background-color: var(--color-light); /* Color de fondo */
 }
 
 .about-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: var(--spacing-lg);
-  background: white;
-  border-radius: 1rem;
-  box-shadow: var(--shadow-md);
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: var(--spacing-lg); /* Padding interno */
+  background: white; /* Color de fondo */
+  border-radius: 1rem; /* Bordes redondeados */
+  box-shadow: var(--shadow-md); /* Sombra */
 }
 
 .about-content h2 {
-  color: var(--color-dark);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin-bottom: var(--spacing-xs);
+  color: var(--color-dark); /* Color del texto */
+  font-size: var(--font-size-xl); /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  margin-bottom: var(--spacing-xs); /* Margen inferior */
 }
 
 .about-content h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: var(--color-primary);
-  border-radius: 2px;
+  content: ''; /* Contenido vacío */
+  position: absolute; /* Posición absoluta */
+  bottom: -10px; /* Posición inferior */
+  left: 50%; /* Posición izquierda */
+  transform: translateX(-50%); /* Transformación */
+  width: 60px; /* Ancho */
+  height: 3px; /* Altura */
+  background-color: var(--color-primary); /* Color de fondo */
+  border-radius: 2px; /* Bordes redondeados */
 }
 
 .about-content p {
-  color: var(--color-text-light);
-  margin-bottom: var(--spacing-xs);
-  line-height: 1.6;
-  font-size: var(--font-size-base);
+  color: var(--color-text-light); /* Color del texto */
+  margin-bottom: var(--spacing-xs); /* Margen inferior */
+  line-height: 1.6; /* Altura de línea */
+  font-size: var(--font-size-base); /* Tamaño de la fuente */
 }
 
 .about-signature {
-  color: var(--color-primary);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  text-align: right;
-  margin-top: var(--spacing-lg);
+  color: var(--color-primary); /* Color del texto */
+  font-size: var(--font-size-xl); /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  text-align: right; /* Alineación del texto a la derecha */
+  margin-top: var(--spacing-lg); /* Margen superior */
 }
-
-
-
-
-
-
-
 
 
 /* Media Queries para Hero */
 @media (max-width: 768px) {
   /* Media Queries para Hero */
   .hero-content {
-    padding: var(--spacing-md);
-    margin: 0 var(--spacing-sm);
+    padding: var(--spacing-md); /* Padding interno reducido */
+    margin: 0 var(--spacing-sm); /* Margen lateral reducido */
+    width: 90%;
+  }
+
+  .hero-content .title {
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .hero-logo {
+    max-width: 120px;
+    margin: var(--spacing-xs) 0;
   }
 
   .hero-description {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base); /* Tamaño de fuente reducido */
+    padding: 0;
+    margin-bottom: var(--spacing-md);
+  }
+  .section.hero {
+    background-attachment: scroll;
   }
   /* Media Queries para Hero */
 
   /* Media queries para navegación responsive */
   .nav {
-    justify-content: flex-end;
-    padding: var(--spacing-sm);
+    justify-content: flex-end; /* Alineación a la derecha */
+    padding: var(--spacing-sm); /* Padding interno reducido */
   }
 
   .menu-toggle {
     display: block;
-    position: relative;
-    /* z-index: 1002; */
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2000;
+    background-color: var(--color-primary);
+    border: none;
+    color: var(--color-light);
+    font-size: var(--font-size-2xl);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    border-radius: 4px;
   }
 
   .nav-links {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--color-primary);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--spacing-lg);
-    z-index: 1001;
+    display: none; /* Oculta los enlaces de navegación */
+    position: fixed; /* Posición fija */
+    top: 0; /* Posición superior */
+    left: 0; /* Posición izquierda */
+    right: 0; /* Posición derecha */
+    bottom: 0; /* Posición inferior */
+    background: var(--color-primary); /* Color de fondo */
+    flex-direction: column; /* Dirección de columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    gap: var(--spacing-lg); /* Espacio entre elementos */
+    z-index: 1001; /* Índice z */
   }
 
   .nav-links.active {
-    display: flex;
-    animation: fadeIn 0.3s ease;
-    /* z-index: 1999; Ajustado para estar debajo del botón */
+    display: flex; /* Muestra los enlaces de navegación */
+    animation: fadeIn 0.3s ease; /* Animación de entrada */
   }
 
   .nav_link {
-    font-size: var(--font-size-xl);
-    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: var(--font-size-xl); /* Tamaño de fuente aumentado */
+    padding: var(--spacing-sm) var(--spacing-lg); /* Padding interno aumentado */
   }
 
   .nav_link::after {
-    display: none;
+    display: none; /* Oculta el efecto de subrayado */
   }
   /* Media queries para navegación responsive */
 
-/* Media queries para servicios */
+  /* Media queries para servicios */
   .services {
-    padding: var(--spacing-lg) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm); /* Padding interno reducido */
   }
 
   .service-card {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md); /* Margen inferior aumentado */
   }
 
   .service-header h3 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-lg); /* Tamaño de fuente reducido */
   }
   /* Media queries para servicios */
 
-
-
-/* Media queries para container global */
+  /* Media queries para container global */
   .container {
-    padding: 0 var(--spacing-sm);
+    padding: 0 var(--spacing-sm); /* Padding interno reducido */
   }
 
   /* Media queries para container ABOUT */
   .about-content {
-    padding: var(--spacing-md);
-    margin: 0 var(--spacing-sm);
+    padding: var(--spacing-md); /* Padding interno reducido */
+    margin: 0 var(--spacing-sm); /* Margen lateral reducido */
   }
 
   .about-content h2 {
-    font-size: var(--font-size-2xl);
+    font-size: var(--font-size-2xl); /* Tamaño de fuente reducido */
   }
 
   .about-content p {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-base); /* Tamaño de fuente base */
   }
 
   /* Media queries para la sección de contacto */
   .services .grid,
   .contact-cards .grid,
   .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
+    grid-template-columns: 1fr; /* Una columna */
+    gap: var(--spacing-sm); /* Espacio entre elementos reducido */
   }
 
   .service-card,
   .contact-card {
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-md); /* Margen inferior aumentado */
   }
-  
 
   /* Media queries para la sección de contacto */
-
 }
 
 @media (max-width: 480px) {
   .services .grid,
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Una columna */
   }
 }
-/* ssssss */
+
 /* Estilos para el Slider */
 .slider-section {
-  padding: var(--spacing-xl) 0;
-  background: var(--color-light);
-  overflow: hidden;
+  padding: var(--spacing-xl) 0; /* Padding interno */
+  background: var(--color-light); /* Color de fondo */
+  overflow: hidden; /* Oculta el desbordamiento */
 }
 
 .slider-container {
-  position: relative;
-  /* ancho que ocupa el slider */
-  max-width: 900px; /* Aumentado para acomodar más imágenes */
-  margin: 0 auto;
-  padding: var(--spacing-md);
-  overflow: visible;
+  position: relative; /* Posición relativa */
+  max-width: 900px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el contenedor */
+  padding: var(--spacing-md); /* Padding interno */
+  overflow: visible; /* Muestra el desbordamiento */
 }
 
 .slider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  height: 440px; /* Reducido para acomodar más imágenes */
-  position: relative;
-  width: 100%;
+  display: flex; /* Flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); /* Transición suave */
+  height: 440px; /* Altura fija */
+  position: relative; /* Posición relativa */
+  width: 100%; /* Ancho completo */
 }
 
 .slide {
-  position: absolute;
-  width: 400px;
-  height: 100%;
-  transition: all 0.5s ease;
-  border-radius: 1rem;
-  overflow: hidden;
+  position: absolute; /* Posición absoluta */
+  width: 400px; /* Ancho fijo */
+  height: 100%; /* Altura completa */
+  transition: all 0.5s ease; /* Transición suave */
+  border-radius: 1rem; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el desbordamiento */
 }
 
 .slide.prev-2 {
-  transform: translateX(-130%) scale(0.85);
-  opacity: 0.2;
-  z-index: 0;
+  transform: translateX(-130%) scale(0.85); /* Transformación */
+  opacity: 0.1; /* Opacidad */
+  z-index: 0; /* Índice z */
 }
 
 .slide.prev {
-  transform: translateX(-25%) scale(0.95);
-  opacity: 0.6;
-  z-index: 1;
+  transform: translateX(-15%) scale(0.95); /* Transformación */
+  opacity: 0.5; /* Opacidad */
+  z-index: 1; /* Índice z */
 }
 
 .slide.active {
-  transform: translateX(0) scale(1.01);
-  opacity: 1;
-  z-index: 2;
+  transform: translateX(0) scale(1.01); /* Transformación */
+  opacity: 1; /* Opacidad */
+  z-index: 2; /* Índice z */
 }
 
 .slide.next {
-  transform: translateX(25%) scale(0.95);
-  opacity: 0.6;
-  z-index: 1;
+  transform: translateX(15%) scale(0.95); /* Transformación */
+  opacity: 0.5; /* Opacidad */
+  z-index: 1; /* Índice z */
 }
 
 .slide.next-2 {
-  transform: translateX(130%) scale(0.85);
-  opacity: 0.2;
-  z-index: 0;
+  transform: translateX(130%) scale(0.85); /* Transformación */
+  opacity: 0.1; /* Opacidad */
+  z-index: 0; /* Índice z */
 }
 
 .slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  object-fit: cover; /* Cubre el espacio */
+  transition: transform 0.5s ease; /* Transición suave */
 }
 
 .slide:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Escala al pasar el mouse */
 }
 
 .slide-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--spacing-sm);
+  position: absolute; /* Posición absoluta */
+  bottom: 0; /* Posición inferior */
+  left: 0; /* Posición izquierda */
+  right: 0; /* Posición derecha */
+  padding: var(--spacing-sm); /* Padding interno */
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.2)
-  );
-  color: var(--color-light);
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+  ); /* Degradado */
+  color: var(--color-light); /* Color del texto */
+  transform: translateY(100%); /* Transformación */
+  transition: transform 0.3s ease; /* Transición suave */
 }
 
 .slide-content h3 {
-  color: var(--color-light);
-  font-size: var(--font-size-xl);
-  font-weight: 600;
-  margin-bottom: var(--spacing-ss);
-  line-height: 1.3; /* Añadido para compactar más */
+  color: var(--color-light); /* Color del texto */
+  font-size: var(--font-size-xl); /* Tamaño de la fuente */
+  font-weight: 600; /* Grosor de la fuente */
+  margin-bottom: var(--spacing-ss); /* Margen inferior */
+  line-height: 1.3; /* Altura de línea */
 }
 
 .slide-content p {
-  color: var(--color-light);
-  margin-bottom: var(--spacing-ss);
-  line-height: 1.3;/* Añadido para compactar más */
-  font-size: var(--font-size-base);
-  opacity: 0.9;
+  color: var(--color-light); /* Color del texto */
+  margin-bottom: var(--spacing-ss); /* Margen inferior */
+  line-height: 1.3; /* Altura de línea */
+  font-size: var(--font-size-base); /* Tamaño de la fuente */
+  opacity: 0.9; /* Opacidad */
 }
 
 .slide:hover .slide-content {
-  transform: translateY(0);
+  transform: translateY(0); /* Transformación al pasar el mouse */
 }
 
 .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  backdrop-filter: blur(5px);
-  color: var(--color-light);
-  font-size: var(--font-size-xl);
-  transition: all 0.3s ease;
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Posición superior */
+  transform: translateY(-50%); /* Transformación */
+  z-index: 3; /* Índice z */
+  background: rgba(255, 255, 255, 0.3); /* Color de fondo */
+  backdrop-filter: blur(10px); /* Efecto de desenfoque */
+  border: none; /* Sin borde */
+  width: 50px; /* Ancho */
+  height: 50px; /* Altura */
+  border-radius: 50%; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de puntero */
+  backdrop-filter: blur(5px); /* Efecto de desenfoque */
+  color: var(--color-light); /* Color del texto */
+  font-size: var(--font-size-xl); /* Tamaño de la fuente */
+  transition: all 0.3s ease; /* Transición suave */
 }
 
 .slider-btn:hover {
-  background: var(--color-primary);
+  background: var(--color-primary); /* Color de fondo al pasar el mouse */
 }
 
 .prev {
-  left: 20px;
+  left: 20px; /* Posición izquierda */
 }
 
 .next {
-  right: 20px;
+  right: 20px; /* Posición derecha */
 }
 
 .slider-dots {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
+  position: absolute; /* Posición absoluta */
+  bottom: 20px; /* Posición inferior */
+  left: 50%; /* Posición izquierda */
+  transform: translateX(-50%); /* Transformación */
+  display: flex; /* Flexbox para alinear elementos */
+  gap: 10px; /* Espacio entre elementos */
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  transition: all 0.3s ease;
+  width: 10px; /* Ancho */
+  height: 10px; /* Altura */
+  border-radius: 50%; /* Bordes redondeados */
+  background: rgba(255, 255, 255, 0.5); /* Color de fondo */
+  cursor: pointer; /* Cursor de puntero */
+  transition: all 0.3s ease; /* Transición suave */
 }
 
 .dot.active {
-  background: var(--color-primary);
-  transform: scale(1.2);
+  background: var(--color-primary); /* Color de fondo */
+  transform: scale(1.2); /* Escala */
 }
 
-.lang-switch {
-  background: transparent;
-  border: 1px solid var(--color-light);
-  color: var(--color-light);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: var(--font-size-base);
-  transition: all 0.3s ease;
-}
 
-.lang-switch:hover {
-  background: var(--color-light);
-  color: var(--color-primary);
-}
+/* Agregar más breakpoints para mejor responsividad */
+@media (max-width: 1200px) { /* Desktop pequeño */ }
+@media (max-width: 992px) { /* Tablet landscape */ }
+@media (max-width: 768px) { /* Tablet portrait */ }
+@media (max-width: 576px) { /* Mobile */ }
+
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1a1a1a;
+    --color-text: #ffffff;
+  }
+} */
