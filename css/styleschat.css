@@ -151,7 +151,7 @@ body {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.7)
-  ), url("../fondoHeader.png"); /* Imagen de fondo con degradado */
+  ), url("../fondoHeader.jpg"); /* Imagen de fondo con degradado */
   background-size: cover; /* Cubre todo el espacio */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Fija la imagen */
@@ -1043,6 +1043,121 @@ body {
   transform: scale(1.2); /* Escala */
 }
 
+/* REVIEWERS */
+.reviews {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.reviews {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.reviews-subtitle {
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.review-item {
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  padding: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.reviewer-profile {
+  display: flex;
+  align-items: center;
+}
+
+.reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  color: #666;
+  font-size: 1.8rem;
+}
+
+.reviewer-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.review-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.review-rating {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+.review-text {
+  margin: 10px 0 15px;
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.review-project {
+  font-size: 0.9rem;
+  color: #007bff;
+  font-weight: 500;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f0;
+}
+
+/* REVIEWERS */
+
+/* Animaciones para las reseñas */
+.review-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.review-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
 
 /* Agregar más breakpoints para mejor responsividad */
 @media (max-width: 1200px) { /* Desktop pequeño */ }

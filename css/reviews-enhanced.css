@@ -1,0 +1,454 @@
+/**
+ * ESTILOS MEJORADOS PARA EL SISTEMA DE RESEÑAS
+ * ==========================================
+ * 
+ * Este archivo contiene los estilos para las siguientes mejoras:
+ * 1. Sistema de filtrado por tipo de servicio
+ * 2. Carrusel para mostrar más reseñas sin ocupar espacio vertical
+ * 3. Formulario para que los clientes dejen nuevas reseñas
+ * 4. Insignias de verificación para reseñas verificadas
+ * 5. Estadísticas generales de calificaciones
+ * 6. Mejora de responsividad en dispositivos móviles
+ * 
+ * Autor: Trae AI
+ * Fecha: 2023
+ */
+
+/* 1. SISTEMA DE FILTRADO POR TIPO DE SERVICIO */
+.review-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.filter-label {
+  font-size: 1rem;
+  color: #555;
+  margin: 0 10px 0 0;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 6px 15px;
+  font-size: 0.9rem;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-btn.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* 2. CARRUSEL PARA MOSTRAR MÁS RESEÑAS */
+.carousel-controls {
+  display: flex; /* Siempre visible en ambos modos */
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.carousel-btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+.carousel-btn:hover {
+  background-color: #f0f0f0;
+  color: #007bff;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 8px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #007bff;
+  transform: scale(1.2);
+}
+
+/* 3. FORMULARIO PARA NUEVAS RESEÑAS */
+.review-form-container {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.review-form-toggle {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 20px;
+}
+
+.review-form-toggle:hover {
+  background-color: #0069d9;
+}
+
+.review-form-toggle.active {
+  background-color: #dc3545;
+}
+
+.review-form-wrapper {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.3s ease;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.review-form-wrapper.hidden {
+  display: none;
+}
+
+.review-form h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.rating-input {
+  display: flex;
+  gap: 5px;
+  font-size: 1.5rem;
+  color: #ffc107;
+}
+
+.rating-input i {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rating-input i:hover {
+  transform: scale(1.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  color: #555;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background-color: #e2e6ea;
+}
+
+.btn-submit {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #218838;
+}
+
+/* Notificación de éxito */
+.review-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.review-notification.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 4. INSIGNIAS DE VERIFICACIÓN */
+.verified-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.8rem;
+  color: #28a745;
+  margin-top: 5px;
+}
+
+.verified-badge i {
+  font-size: 0.9rem;
+}
+
+/* 5. ESTADÍSTICAS GENERALES DE CALIFICACIONES */
+.review-stats {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.review-stats h3 {
+  margin-top: 0;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stats-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stats-summary {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.average-rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1;
+}
+
+.rating-stars {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.rating-count {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.rating-bars {
+  flex: 2;
+  min-width: 250px;
+}
+
+.rating-bar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rating-label {
+  width: 50px;
+  color: #666;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.rating-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  height: 100%;
+  background-color: #ffc107;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.rating-percent {
+  width: 40px;
+  text-align: right;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* 6. MEJORA DE RESPONSIVIDAD */
+@media (max-width: 992px) {
+  .review-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .stats-content {
+    flex-direction: column;
+  }
+
+  .stats-summary,
+  .rating-bars {
+    width: 100%;
+  }
+}
+
+/* Estilos para la lista de reseñas */
+.review-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Estilos para el carrusel de escritorio */
+.review-list.desktop-carousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Estilos para el carrusel móvil */
+.review-list.mobile-carousel {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .review-list {
+    display: block;
+  }
+
+  .review-item {
+    margin-bottom: 0;
+  }
+
+  .review-filters {
+    flex-direction: column;
+  }
+
+  .filter-label {
+    margin-bottom: 10px;
+  }
+
+  .review-form-wrapper {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .review-stats {
+    padding: 15px;
+  }
+
+  .rating-number {
+    font-size: 2.5rem;
+  }
+
+  .rating-stars {
+    font-size: 1.2rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-submit {
+    width: 100%;
+  }
+}

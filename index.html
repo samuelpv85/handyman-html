@@ -59,6 +59,7 @@
     <link rel="stylesheet" href="css/styleschat.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/lang.css" />
+    <link rel="stylesheet" href="css/reviews-enhanced.css" />
   </head>
 
   <body>
@@ -388,6 +389,25 @@
       </div>
     </section>
 
+    <!-- reviewers -->
+    <section class="reviews" id="reviews">
+      <div class="container">
+        <h2 class="text-center" data-translate="reviews.title">
+          Customer Reviews
+        </h2>
+        <p
+          class="reviews-subtitle text-center"
+          data-translate="reviews.subtitle"
+        >
+          What our clients say about our services
+        </p>
+
+        <div class="review-list">
+          <!-- Las reseñas se cargarán dinámicamente desde la base de datos -->
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <div class="footer-content">
@@ -409,6 +429,8 @@
     <script src="js/gallery.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/slider.js"></script>
+    <script src="js/reviews-enhanced.js"></script>
+
     <!-- Add before closing body tag -->
     <script src="js/translations.js"></script>
   </body>

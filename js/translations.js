@@ -45,6 +45,38 @@ const translations = {
       "In our gallery, you'll find completed projects and testimonials from satisfied clients that support our commitment to excellence. We strive to offer competitive and transparent prices, ensuring the best value for money.",
     "about.p5":
       "If you're looking for a reliable and professional team for your projects, CONTACT US TODAY! We're here to make your dream home or business spaces a reality.",
+    "reviews.title": "Customer Reviews",
+    "reviews.subtitle": "What our clients say about our services",
+    "reviews.review1.name": "John Doe",
+    "reviews.review1.date": "March 15, 2023",
+    "reviews.review1.comment":
+      "Excellent service! The painting job they did in my living room exceeded my expectations. The team was professional, punctual and left everything impeccably clean.",
+    "reviews.review1.project": "Project: Interior Painting",
+    "reviews.review2.name": "Jane Smith",
+    "reviews.review2.date": "April 22, 2023",
+    "reviews.review2.comment":
+      "I hired Handyman for furniture assembly in my new apartment. They were efficient, detail-oriented and very helpful with suggestions. Highly recommended!",
+    "reviews.review2.project": "Project: Furniture Assembly",
+    "reviews.review3.name": "Carlos Rodríguez",
+    "reviews.review3.date": "May 10, 2023",
+    "reviews.review3.comment":
+      "The molding installation completely transformed my dining room. The craftsmanship is outstanding and the attention to detail is impressive. Will definitely use their services again.",
+    "reviews.review3.project": "Project: Decorative Moldings",
+    "reviews.review4.name": "Maria González",
+    "reviews.review4.date": "June 18, 2023",
+    "reviews.review4.comment":
+      "I needed to renovate my kitchen cabinets and Handyman did an amazing job. They were very professional from start to finish and completed the work ahead of schedule. The quality of their carpentry work is exceptional.",
+    "reviews.review4.project": "Project: Cabinet Renovation",
+    "reviews.review5.name": "Robert Johnson",
+    "reviews.review5.date": "July 5, 2023",
+    "reviews.review5.comment":
+      "Handyman installed custom shelving throughout my office space. The team was knowledgeable and efficient. The shelves look great and have significantly improved our storage capacity. Would recommend for any office renovation.",
+    "reviews.review5.project": "Project: Custom Shelving",
+    "reviews.review6.name": "Elena Martínez",
+    "reviews.review6.date": "August 12, 2023",
+    "reviews.review6.comment":
+      "We hired Handyman to remodel our bathroom and they did a fantastic job. The tile work is beautiful and the fixtures were installed perfectly. They were very attentive to our needs and made sure everything was exactly as we wanted.",
+    "reviews.review6.project": "Project: Bathroom Remodeling",
     "contact.title": "Contact Us",
     "contact.info.title": "Contact Information",
     "contact.info.address": "1234 Main Street, City, State",
@@ -74,6 +106,9 @@ const translations = {
     "nav.gallery": "Galería de Proyectos",
     "nav.about": "Nosotros",
     "nav.contact": "Contacto",
+    "reviews.title": "Opiniones de Clientes",
+    "reviews.subtitle":
+      "Lo que nuestros clientes dicen sobre nuestros servicios",
     "services.title": "Nuestros Servicios",
     "services.painting.title": "Pintura",
     "services.painting.description":
@@ -111,6 +146,36 @@ const translations = {
       "En nuestra galería, encontrarás proyectos realizados y testimonios de clientes satisfechos que respaldan nuestro compromiso con la excelencia. Nos esforzamos por ofrecer precios competitivos y transparentes, asegurando la mejor relación calidad-precio.",
     "about.p5":
       "Si buscas un equipo confiable y profesional para tus proyectos, ¡CONTÁCTANOS HOY MISMO! Estamos aquí para hacer realidad y transformar espacios del hogar o negocio que siempre has soñado.",
+    "reviews.review1.name": "John Doe",
+    "reviews.review1.date": "15 de marzo, 2023",
+    "reviews.review1.comment":
+      "¡Excelente servicio! El trabajo de pintura que hicieron en mi sala superó mis expectativas. El equipo fue profesional, puntual y dejó todo impecablemente limpio.",
+    "reviews.review1.project": "Proyecto: Pintura Interior",
+    "reviews.review2.name": "Jane Smith",
+    "reviews.review2.date": "22 de abril, 2023",
+    "reviews.review2.comment":
+      "Contraté a Handyman para el ensamblaje de muebles en mi nuevo apartamento. Fueron eficientes, detallistas y muy serviciales con sus sugerencias. ¡Altamente recomendados!",
+    "reviews.review2.project": "Proyecto: Ensamblaje de Muebles",
+    "reviews.review3.name": "Carlos Rodríguez",
+    "reviews.review3.date": "10 de mayo, 2023",
+    "reviews.review3.comment":
+      "La instalación de molduras transformó completamente mi comedor. La artesanía es sobresaliente y la atención al detalle es impresionante. Definitivamente volveré a utilizar sus servicios.",
+    "reviews.review3.project": "Proyecto: Molduras Decorativas",
+    "reviews.review4.name": "Maria González",
+    "reviews.review4.date": "18 de junio, 2023",
+    "reviews.review4.comment":
+      "Necesitaba renovar los gabinetes de mi cocina y Handyman hizo un trabajo increíble. Fueron muy profesionales de principio a fin y completaron el trabajo antes de lo programado. La calidad de su trabajo de carpintería es excepcional.",
+    "reviews.review4.project": "Proyecto: Renovación de Gabinetes",
+    "reviews.review5.name": "Robert Johnson",
+    "reviews.review5.date": "5 de julio, 2023",
+    "reviews.review5.comment":
+      "Handyman instaló estanterías personalizadas en todo mi espacio de oficina. El equipo fue conocedor y eficiente. Las estanterías se ven geniales y han mejorado significativamente nuestra capacidad de almacenamiento. Recomendaría para cualquier renovación de oficina.",
+    "reviews.review5.project": "Proyecto: Estanterías Personalizadas",
+    "reviews.review6.name": "Elena Martínez",
+    "reviews.review6.date": "12 de agosto, 2023",
+    "reviews.review6.comment":
+      "Contratamos a Handyman para remodelar nuestro baño e hicieron un trabajo fantástico. El trabajo de azulejos es hermoso y los accesorios fueron instalados perfectamente. Fueron muy atentos a nuestras necesidades y se aseguraron de que todo fuera exactamente como queríamos.",
+    "reviews.review6.project": "Proyecto: Remodelación de Baño",
     "contact.title": "Contáctanos",
     "contact.info.title": "Información de Contacto",
     "contact.info.address": "1234 Calle Principal, Ciudad, Estado",
