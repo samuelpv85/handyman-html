@@ -1,0 +1,31 @@
+/* Estilos base para el sistema de reseñas */
+.review-section {
+  padding: 2rem;
+  background: #f8f9fa;
+}
+
+.review-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .review-section {
+    padding: 1rem;
+  }
+}

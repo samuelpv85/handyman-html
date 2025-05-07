@@ -151,7 +151,7 @@ body {
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0.7)
-  ), url("../fondoHeader.jpg"); /* Imagen de fondo con degradado */
+  ), url("../galeria/fondoHeader.jpg"); /* Imagen de fondo con degradado */
   background-size: cover; /* Cubre todo el espacio */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Fija la imagen */

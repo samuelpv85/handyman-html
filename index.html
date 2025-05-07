@@ -59,7 +59,8 @@
     <link rel="stylesheet" href="css/styleschat.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/lang.css" />
-    <link rel="stylesheet" href="css/reviews-enhanced.css" />
+    <link rel="stylesheet" href="css/reviews.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
 
   <body>
@@ -68,7 +69,7 @@
       <div class="hero-content">
         <h1 class="title">
           <span data-translate="hero.title">Handyman</span>
-          <img src="logo.jpeg" alt="Handyman logo" />
+          <img src="galeria/logo.jpeg" alt="Handyman logo" />
         </h1>
         <p class="hero-description" data-translate="hero.description">
           Experts in maintenance, painting and remodeling services
@@ -88,6 +89,9 @@
           >Project Gallery</a
         >
         <a href="#4" class="nav_link" data-translate="nav.about">About</a>
+        <a href="#reviews" class="nav_link" data-translate="nav.reviews"
+          >Reviews</a
+        >
         <a href="#5" class="nav_link" data-translate="nav.contact">Contact</a>
         <button class="lang-switch" aria-label="Change language">
           <span class="lang-flag flag-es"></span>
@@ -389,24 +393,159 @@
       </div>
     </section>
 
-    <!-- reviewers -->
-    <section class="reviews" id="reviews">
-      <div class="container">
-        <h2 class="text-center" data-translate="reviews.title">
-          Customer Reviews
-        </h2>
-        <p
-          class="reviews-subtitle text-center"
-          data-translate="reviews.subtitle"
-        >
-          What our clients say about our services
-        </p>
-
-        <div class="review-list">
-          <!-- Las reseñas se cargarán dinámicamente desde la base de datos -->
+    <!-- Sección de reseñas (integrada directamente) -->
+    <section class="reviews-section" id="reviews">
+      <div class="reviews-container">
+        <div class="reviews-header">
+          <h2>Opiniones de Nuestros Clientes</h2>
+          <p>
+            Descubre lo que dicen nuestros clientes sobre nuestros servicios
+          </p>
         </div>
+
+        <!-- Estadísticas de Satisfacción -->
+        <div class="satisfaction-stats">
+          <div class="rating-overview">
+            <div class="average-rating">0.0</div>
+            <div class="star-display">
+              <!-- Las estrellas se generarán dinámicamente con JavaScript -->
+            </div>
+            <div class="review-count">Basado en <span>0</span> reseñas</div>
+          </div>
+          <div class="rating-bars">
+            <!-- Las barras de progreso se generarán dinámicamente con JavaScript -->
+          </div>
+          </div>
+        </div>
+
+        <!-- Filtros de Servicio -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">
+            Todos los servicios
+          </button>
+          <button class="filter-btn" data-filter="painting">
+            <i class="fas fa-paint-roller"></i>Painting
+          </button>
+          <button class="filter-btn" data-filter="assembly">
+            <i class="fas fa-tools"></i>Assembly
+          </button>
+          <button class="filter-btn" data-filter="moldings">
+            <i class="fas fa-hammer"></i>Moldings
+        </div>
+
+        <!-- Carrusel de Reseñas -->
+        <div class="reviews-carousel">
+          <div class="carousel-container" id="reviewsContainer">
+            <!-- Las tarjetas de reseñas se cargarán dinámicamente con JavaScript -->
+          </div>
+        </div>
+
+        <!-- Controles del Carrusel -->
+        <div class="carousel-controls">
+          <button class="carousel-control" id="prevBtn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-control" id="nextBtn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Indicadores del Carrusel -->
+        <div class="carousel-dots" id="carouselDots">
+          <!-- Los puntos se generarán dinámicamente con JavaScript -->
+        </div>
+
+        <!-- Botón para Añadir Reseña -->
+        <button class="add-review-btn" id="addReviewBtn">
+          <i class="fas fa-plus-circle"></i>Añadir tu reseña
+        </button>
       </div>
     </section>
+
+    <!-- Modal para Añadir Reseña -->
+    <div class="review-modal-overlay" id="reviewModal">
+      <div class="review-modal">
+        <div class="modal-header">
+          <h3 class="modal-title">Deja tu opinión</h3>
+          <button class="modal-close" id="modalCloseBtn">&times;</button>
+        </div>
+        <form class="review-form" id="reviewForm">
+          <div class="form-group">
+            <label class="form-label">Servicio recibido</label>
+            <select class="form-control" id="service" required>
+              <option value="">Selecciona un servicio</option>
+              <option value="painting">Painting</option>
+              <option value="assembly">Assembly</option>
+              <option value="moldings">Moldings</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tu calificación</label>
+            <div class="star-rating-container">
+              <div class="star-rating">
+                <input
+                  type="radio"
+                  id="star5"
+                  name="rating"
+                  value="5"
+                  required
+                />
+                <label for="star5"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star4" name="rating" value="4" />
+                <label for="star4"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star3" name="rating" value="3" />
+                <label for="star3"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star2" name="rating" value="2" />
+                <label for="star2"><i class="fas fa-star"></i></label>
+                <input type="radio" id="star1" name="rating" value="1" />
+                <label for="star1"><i class="fas fa-star"></i></label>
+              </div>
+              <span class="rating-text">Selecciona una calificación</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Título de tu reseña</label>
+            <input
+              type="text"
+              class="form-control"
+              id="reviewTitle"
+              placeholder="Resumen de tu experiencia"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tu comentario</label>
+            <textarea
+              class="form-control"
+              id="reviewContent"
+              rows="4"
+              placeholder="Comparte los detalles de tu experiencia con nuestro servicio"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Tu nombre</label>
+            <input
+              type="text"
+              class="form-control"
+              id="customerName"
+              placeholder="¿Cómo te llamas?"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Género</label>
+            <div class="gender-selection">
+              <input type="radio" id="genderMan" name="gender" value="man" checked />
+              <label for="genderMan">Hombre</label>
+              <input type="radio" id="genderWoman" name="gender" value="woman" />
+              <label for="genderWoman">Mujer</label>
+            </div>
+          </div>
+          <button type="submit" class="form-submit">Enviar reseña</button>
+        </form>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -429,7 +568,8 @@
     <script src="js/gallery.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/slider.js"></script>
-    <script src="js/reviews-enhanced.js"></script>
+    <script src="js/reviews-data.js"></script>
+    <script src="js/reviews.js"></script>
 
     <!-- Add before closing body tag -->
     <script src="js/translations.js"></script>
