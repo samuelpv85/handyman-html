@@ -397,9 +397,9 @@
     <section class="reviews-section" id="reviews">
       <div class="reviews-container">
         <div class="reviews-header">
-          <h2>Opiniones de Nuestros Clientes</h2>
-          <p>
-            Descubre lo que dicen nuestros clientes sobre nuestros servicios
+          <h2 data-translate="reviews.title">Customer Reviews</h2>
+          <p data-translate="reviews.subtitle">
+            Discover what our customers say about our services
           </p>
         </div>
 
@@ -410,7 +410,7 @@
             <div class="star-display">
               <!-- Las estrellas se generarán dinámicamente con JavaScript -->
             </div>
-            <div class="review-count">Basado en <span>0</span> reseñas</div>
+            <div class="review-count" data-translate="reviews.basedOn">Based on <span>0</span> reviews</div>
           </div>
           <div class="rating-bars">
             <!-- Las barras de progreso se generarán dinámicamente con JavaScript -->
@@ -420,8 +420,8 @@
 
         <!-- Filtros de Servicio -->
         <div class="filter-container">
-          <button class="filter-btn active" data-filter="all">
-            Todos los servicios
+          <button class="filter-btn active" data-filter="all" data-translate="reviews.filterAll">
+            All services
           </button>
           <button class="filter-btn" data-filter="painting">
             <i class="fas fa-paint-roller"></i>Painting
@@ -456,8 +456,8 @@
         </div>
 
         <!-- Botón para Añadir Reseña -->
-        <button class="add-review-btn" id="addReviewBtn">
-          <i class="fas fa-plus-circle"></i>Añadir tu reseña
+        <button class="add-review-btn" id="addReviewBtn" data-translate="reviews.addButton">
+          <i class="fas fa-plus-circle"></i>Add your review
         </button>
       </div>
     </section>
@@ -466,21 +466,21 @@
     <div class="review-modal-overlay" id="reviewModal">
       <div class="review-modal">
         <div class="modal-header">
-          <h3 class="modal-title">Deja tu opinión</h3>
+          <h3 class="modal-title" data-translate="reviews.modalTitle">Leave your review</h3>
           <button class="modal-close" id="modalCloseBtn">&times;</button>
         </div>
         <form class="review-form" id="reviewForm">
           <div class="form-group">
-            <label class="form-label">Servicio recibido</label>
+            <label class="form-label" data-translate="reviews.form.service">Service received</label>
             <select class="form-control" id="service" required>
-              <option value="">Selecciona un servicio</option>
+              <option value="" data-translate="reviews.form.selectService">Select a service</option>
               <option value="painting">Painting</option>
               <option value="assembly">Assembly</option>
               <option value="moldings">Moldings</option>
             </select>
           </div>
           <div class="form-group">
-            <label class="form-label">Tu calificación</label>
+            <label class="form-label" data-translate="reviews.form.rating">Your rating</label>
             <div class="star-rating-container">
               <div class="star-rating">
                 <input
@@ -500,49 +500,52 @@
                 <input type="radio" id="star1" name="rating" value="1" />
                 <label for="star1"><i class="fas fa-star"></i></label>
               </div>
-              <span class="rating-text">Selecciona una calificación</span>
+              <span class="rating-text" data-translate="reviews.form.selectRating">Select a rating</span>
             </div>
           </div>
           <div class="form-group">
-            <label class="form-label">Título de tu reseña</label>
+            <label class="form-label" data-translate="reviews.form.title">Title of your review</label>
             <input
               type="text"
               class="form-control"
               id="reviewTitle"
-              placeholder="Resumen de tu experiencia"
+              data-translate="reviews.form.titlePlaceholder" 
+              placeholder="Summary of your experience"
               required
             />
           </div>
           <div class="form-group">
-            <label class="form-label">Tu comentario</label>
+            <label class="form-label" data-translate="reviews.form.comment">Your comment</label>
             <textarea
               class="form-control"
               id="reviewContent"
               rows="4"
-              placeholder="Comparte los detalles de tu experiencia con nuestro servicio"
+              data-translate="reviews.form.commentPlaceholder"
+              placeholder="Share the details of your experience with our service"
               required
             ></textarea>
           </div>
           <div class="form-group">
-            <label class="form-label">Tu nombre</label>
+            <label class="form-label" data-translate="reviews.form.name">Your name</label>
             <input
               type="text"
               class="form-control"
               id="customerName"
-              placeholder="¿Cómo te llamas?"
+              data-translate="reviews.form.namePlaceholder"
+              placeholder="What's your name?"
               required
             />
           </div>
           <div class="form-group">
-            <label class="form-label">Género</label>
+            <label class="form-label" data-translate="reviews.form.gender">Gender</label>
             <div class="gender-selection">
               <input type="radio" id="genderMan" name="gender" value="man" checked />
-              <label for="genderMan">Hombre</label>
+              <label for="genderMan" data-translate="reviews.form.genderMan">Man</label>
               <input type="radio" id="genderWoman" name="gender" value="woman" />
-              <label for="genderWoman">Mujer</label>
+              <label for="genderWoman" data-translate="reviews.form.genderWoman">Woman</label>
             </div>
           </div>
-          <button type="submit" class="form-submit">Enviar reseña</button>
+          <button type="submit" class="form-submit" data-translate="reviews.form.submit">Submit review</button>
         </form>
       </div>
     </div>

@@ -10,14 +10,29 @@ const translations = {
     "nav.reviews": "Reviews",
     "nav.contact": "Contact",
     "reviews.title": "Customer Reviews",
+    "reviews.subtitle": "Discover what our customers say about our services",
     "reviews.writeReview": "Write a Review",
     "reviews.satisfaction": "Customer Satisfaction",
     "reviews.basedOn": "Based on <span>0</span> reviews",
     "reviews.filterBy": "Filter by service:",
-    "reviews.filterAll": "All",
+    "reviews.filterAll": "All services",
     "reviews.modalTitle": "Leave your review",
+    "reviews.addButton": "Add your review",
+    "reviews.form.service": "Service received",
+    "reviews.form.selectService": "Select a service",
+    "reviews.form.rating": "Your rating",
+    "reviews.form.selectRating": "Select a rating",
+    "reviews.form.title": "Title of your review",
+    "reviews.form.titlePlaceholder": "Summary of your experience",
+    "reviews.form.comment": "Your comment",
+    "reviews.form.commentPlaceholder": "Share the details of your experience with our service",
+    "reviews.form.name": "Your name",
+    "reviews.form.namePlaceholder": "What's your name?",
+    "reviews.form.gender": "Gender",
+    "reviews.form.genderMan": "Man",
+    "reviews.form.genderWoman": "Woman",
+    "reviews.form.submit": "Submit review",
     "reviews.form.customerId": "Customer ID:",
-    "reviews.form.service": "Service:",
     "reviews.form.projectId": "Project ID:",
     "services.title": "Our Services",
     "services.painting.title": "Painting",
@@ -86,15 +101,30 @@ const translations = {
     "nav.about": "Nosotros",
     "nav.reviews": "Reseñas",
     "nav.contact": "Contacto",
-    "reviews.title": "Reseñas de Clientes",
+    "reviews.title": "Opiniones de Nuestros Clientes",
+    "reviews.subtitle": "Descubre lo que dicen nuestros clientes sobre nuestros servicios",
     "reviews.writeReview": "Escribir Reseña",
     "reviews.satisfaction": "Satisfacción del Cliente",
     "reviews.basedOn": "Basado en <span>0</span> reseñas",
     "reviews.filterBy": "Filtrar por servicio:",
-    "reviews.filterAll": "Todos",
+    "reviews.filterAll": "Todos los servicios",
     "reviews.modalTitle": "Deja tu opinión",
+    "reviews.addButton": "Añadir tu reseña",
+    "reviews.form.service": "Servicio recibido",
+    "reviews.form.selectService": "Selecciona un servicio",
+    "reviews.form.rating": "Tu calificación",
+    "reviews.form.selectRating": "Selecciona una calificación",
+    "reviews.form.title": "Título de tu reseña",
+    "reviews.form.titlePlaceholder": "Resumen de tu experiencia",
+    "reviews.form.comment": "Tu comentario",
+    "reviews.form.commentPlaceholder": "Comparte los detalles de tu experiencia con nuestro servicio",
+    "reviews.form.name": "Tu nombre",
+    "reviews.form.namePlaceholder": "¿Cómo te llamas?",
+    "reviews.form.gender": "Género",
+    "reviews.form.genderMan": "Hombre",
+    "reviews.form.genderWoman": "Mujer",
+    "reviews.form.submit": "Enviar reseña",
     "reviews.form.customerId": "ID de Cliente:",
-    "reviews.form.service": "Servicio:",
     "reviews.form.projectId": "ID de Proyecto:",
     "services.title": "Nuestros Servicios",
     "services.painting.title": "Pintura",
@@ -185,7 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("preferredLanguage", newLang);
     } catch (storageError) {
       console.warn(
-        "No se pudo guardar el idioma preferido en el almacenamiento local"
+        "Could not save preferred language in local storage"
       );
     }
   }
@@ -195,7 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     savedLang = localStorage.getItem("preferredLanguage") || "en";
   } catch (storageError) {
     console.warn(
-      "No se pudo acceder al almacenamiento local para obtener el idioma preferido"
+      "Could not access local storage to get preferred language"
     );
   }
   document.documentElement.setAttribute("lang", savedLang);
